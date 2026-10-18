@@ -3,60 +3,221 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Игровые испытания</title>
+  <title>Список лапок</title>
   <style>
-    body { max-width: 900px; margin: 40px auto; padding: 0 16px;
-           font: 16px Arial, sans-serif; color: #222; }
-    .tabs { display: flex; gap: 8px; margin: 24px 0 16px; }
-    button { padding: 10px 16px; cursor: pointer; }
-    .tab.active { background: #222; color: white; }
-    table { width: 100%; border-collapse: collapse; }
-    th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
-    th:last-child, td:last-child { text-align: right; }
+    body {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 16px;
+      font: 16px Arial, sans-serif;
+      color: #222;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 24px 0 16px;
+    }
+
+    button {
+      padding: 10px 16px;
+      cursor: pointer;
+    }
+
+    .tab.active {
+      background: #222;
+      color: white;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    tbody tr.challenge-row {
+      cursor: pointer;
+    }
+
+    tbody tr.completed {
+      background: #d9f7df;
+    }
+
+    @media (max-width: 600px) {
+      body { margin-top: 20px; }
+      th, td { padding: 7px; }
+    }
   </style>
 </head>
 <body>
-  <h1>Игровые испытания</h1>
-  <p>Предложите испытание — перед публикацией я проверю его и при необходимости изменю категорию.</p>
-  <a href="https://github.com/Varkenor/OE_Games_Lapki/issues/new/choose">
-    Предложить испытание
-  </a>
+  <h1>Список лапок</h1>
+
+  <p>
+    Предложите лапки — перед публикацией я проверю их и при необходимости
+    изменю категорию или количество баллов.
+  </p>
+
+  <p>
+    <a href="https://github.com/ВАШ-НИК/ИМЯ-РЕПОЗИТОРИЯ/issues/new/choose">
+      Предложить лапки
+    </a>
+  </p>
 
   <div class="tabs">
-    <button class="tab active" data-category="Простые">Простые</button>
-    <button class="tab" data-category="Трудные">Трудные</button>
-    <button class="tab" data-category="Невозможные">Невозможные</button>
+    <button class="tab active" data-category="Потные">Потные лапки</button>
+    <button class="tab" data-category="Мега">Мега лапки</button>
+    <button class="tab" data-category="Сломанные">Сломанные лапки</button>
+    <button class="tab" data-category="Предложенные">предложения</button>
   </div>
 
   <table>
-    <thead>
-      <tr><th>Игра</th><th>Требование</th><th>Кол-во баллов</th></tr>
-    </thead>
+    <thead id="table-head"></thead>
     <tbody id="rows"></tbody>
   </table>
 
   <script>
+    // Одобренные лапки. У каждых должен быть уникальный id.
     const challenges = [
-      { category: "Простые", game: "Название игры", requirement: "Пример требования", points: 10 },
-      { category: "Трудные", game: "Название игры", requirement: "Другое требование", points: 50 },
-      { category: "Невозможные", game: "Название игры", requirement: "Сложнейшее требование", points: 100 }
+      {
+        id: "easy-example",
+        category: "Потные",
+        game: "Название игры",
+        requirement: "Пример потных требований",
+        points: 10
+      },
+      {
+        id: "hard-example",
+        category: "Мега",
+        game: "Название игры",
+        requirement: "Пример мега требований",
+        points: 50
+      },
+      {
+        id: "impossible-example",
+        category: "Сломанные",
+        game: "Название игры",
+        requirement: "Пример сломанных требований",
+        points: 100
+      }
     ];
 
-    function showCategory(category) {
-      document.querySelector("#rows").innerHTML = challenges
-        .filter(item => item.category === category)
-        .map(item => `<tr><td>${item.game}</td><td>${item.requirement}</td><td>${item.points}</td></tr>`)
-        .join("");
-      document.querySelectorAll(".tab").forEach(button =>
-        button.classList.toggle("active", button.dataset.category === category)
-      );
+    // Предложения, которые вы уже внесли в публичный список.
+    // После проверки меняйте category, points и status при необходимости.
+    const proposals = [
+      {
+        game: "Предложенная игра",
+        requirement: "Пример требования от пользователя",
+        category: "Трудные",
+        points: 25,
+        status: "На рассмотрении",
+        issueUrl: "https://github.com/Varkenor/OE_Games_Lapki/issues/1"
+      }
+    ];
+
+    const head = document.querySelector("#table-head");
+    const rows = document.querySelector("#rows");
+
+    function addCell(row, value, tag = "td") {
+      const cell = document.createElement(tag);
+      cell.textContent = value;
+      row.appendChild(cell);
+      return cell;
     }
 
-    document.querySelectorAll(".tab").forEach(button =>
-      button.addEventListener("click", () => showCategory(button.dataset.category))
-    );
+    function showCategory(category) {
+      head.replaceChildren();
+      rows.replaceChildren();
 
-    showCategory("Простые");
+      const headerRow = document.createElement("tr");
+
+      if (category === "Предложенные") {
+        ["Игра", "Требование", "Категория", "Баллы", "Статус"]
+          .forEach(label => addCell(headerRow, label, "th"));
+
+        head.appendChild(headerRow);
+
+        proposals.forEach(item => {
+          const row = document.createElement("tr");
+          const gameCell = addCell(row, "");
+
+          const link = document.createElement("a");
+          link.textContent = item.game;
+          link.href = item.issueUrl;
+          gameCell.appendChild(link);
+
+          addCell(row, item.requirement);
+          addCell(row, item.category);
+          addCell(row, String(item.points));
+          addCell(row, item.status);
+          rows.appendChild(row);
+        });
+      } else {
+        ["Игра", "Требование", "Кол-во баллов"]
+          .forEach(label => addCell(headerRow, label, "th"));
+
+        head.appendChild(headerRow);
+
+        const completed = JSON.parse(
+          localStorage.getItem("completedChallenges") || "[]"
+        );
+
+        challenges
+          .filter(item => item.category === category)
+          .forEach(item => {
+            const row = document.createElement("tr");
+            row.classList.add("challenge-row");
+            row.dataset.id = item.id;
+
+            if (completed.includes(item.id)) {
+              row.classList.add("completed");
+            }
+
+            addCell(row, item.game);
+            addCell(row, item.requirement);
+            addCell(row, String(item.points));
+
+            row.addEventListener("click", () => {
+              const saved = JSON.parse(
+                localStorage.getItem("completedChallenges") || "[]"
+              );
+
+              const updated = saved.includes(item.id)
+                ? saved.filter(id => id !== item.id)
+                : [...saved, item.id];
+
+              localStorage.setItem(
+                "completedChallenges",
+                JSON.stringify(updated)
+              );
+
+              row.classList.toggle("completed");
+            });
+
+            rows.appendChild(row);
+          });
+      }
+
+      document.querySelectorAll(".tab").forEach(button => {
+        button.classList.toggle(
+          "active",
+          button.dataset.category === category
+        );
+      });
+    }
+
+    document.querySelectorAll(".tab").forEach(button => {
+      button.addEventListener("click", () => {
+        showCategory(button.dataset.category);
+      });
+    });
+
+    showCategory("Потные");
   </script>
 </body>
 </html>
