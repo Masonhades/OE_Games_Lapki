@@ -83,7 +83,7 @@
 
   <script>
     // Одобренные лапки. У каждых должен быть уникальный id.
-    const challenges = [
+    let challenges = [
       {
         id: "easy-example",
         category: "Потные",
@@ -109,7 +109,7 @@
 
     // Предложения, которые вы уже внесли в публичный список.
     // После проверки меняйте category, points и status при необходимости.
-    const proposals = [
+    let proposals = [
       {
         game: "Предложенная игра",
         requirement: "Пример требования от пользователя",
@@ -217,7 +217,20 @@
       });
     });
 
-    showCategory("Потные");
+    fetch("./data.json")
+  .then(response => {
+    if (!response.ok) throw new Error("Не удалось загрузить data.json");
+    return response.json();
+  })
+  .then(data => {
+    challenges = data.challenges;
+    proposals = data.proposals;
+    showCategory("Простые");
+  })
+  .catch(error => {
+    console.error(error);
+    rows.textContent = "Не удалось загрузить таблицу.";
+  });
   </script>
 </body>
 </html>
