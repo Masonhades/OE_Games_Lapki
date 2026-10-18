@@ -3,42 +3,123 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Список лапок</title>
+
+  <title>Таблица Лапок</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 16px;
+      background: #303030;
+      color: #fff;
       font: 16px Arial, sans-serif;
-      color: #222;
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      text-align: center;
+      font-size: 36px;
     }
 
     .tabs {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin: 24px 0 16px;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    button,
+    .suggest-button,
+    select,
+    input {
+      font: inherit;
+      border: 1px solid #666;
+      border-radius: 12px;
+      transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
     }
 
     button {
-      padding: 10px 16px;
+      padding: 10px 18px;
+      background: #444;
+      color: #fff;
       cursor: pointer;
     }
 
+    button:hover,
+    .suggest-button:hover {
+      background: #28633a;
+      box-shadow: 0 0 0 3px rgba(83, 200, 110, 0.2);
+    }
+
     .tab.active {
-      background: #222;
-      color: white;
+      background: #276738;
+      border-color: #48a85e;
+      color: #fff;
+    }
+
+    .suggest-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .suggest-button {
+      display: inline-block;
+      padding: 11px 20px;
+      background: #444;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .filters {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    #search,
+    #sort {
+      width: 100%;
+      padding: 12px 14px;
+      background: #424242;
+      color: #fff;
+    }
+
+    #search::placeholder {
+      color: #ccc;
+    }
+
+    #sort option {
+      background: #424242;
+      color: #fff;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
+      background: #383838;
     }
 
-    th, td {
+    th,
+    td {
       padding: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid #666;
       text-align: left;
+    }
+
+    th {
+      background: #444;
+    }
+
+    a {
+      color: #9bd6ff;
     }
 
     tbody tr.challenge-row {
@@ -46,34 +127,71 @@
     }
 
     tbody tr.completed {
-      background: #d9f7df;
+      background: #285b36;
+    }
+
+    tbody tr:hover {
+      filter: brightness(1.15);
+    }
+
+    .empty-message {
+      color: #ccc;
+      text-align: center;
     }
 
     @media (max-width: 600px) {
-      body { margin-top: 20px; }
-      th, td { padding: 7px; }
+      body {
+        margin-top: 24px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      th,
+      td {
+        padding: 7px;
+        font-size: 14px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <h1>Список лапок</h1>
+  <header>
+    <h1>Таблица Лапок</h1>
 
-  <p>
-    Предложите лапки — перед публикацией я проверю их и при необходимости
-    изменю категорию или количество баллов.
-  </p>
+    <div class="tabs">
+      <button class="tab active" data-category="Потные">Потные</button>
+      <button class="tab" data-category="Мега">Мега</button>
+      <button class="tab" data-category="Сломанные">Сломанные</button>
+      <button class="tab" data-category="Предложенные">Предложенные</button>
+    </div>
 
-  <p>
-    <a href="https://github.com/ВАШ-НИК/ИМЯ-РЕПОЗИТОРИЯ/issues/new/choose">
-      Предложить лапки
-    </a>
-  </p>
+    <div class="suggest-wrap">
+      <a
+        class="suggest-button"
+        href="https://github.com/ВАШ-НИК/ИМЯ-РЕПОЗИТОРИЯ/issues/new/choose"
+      >
+        Предложить свои
+      </a>
+    </div>
+  </header>
 
-  <div class="tabs">
-    <button class="tab active" data-category="Потные">Потные лапки</button>
-    <button class="tab" data-category="Мега">Мега лапки</button>
-    <button class="tab" data-category="Сломанные">Сломанные лапки</button>
-    <button class="tab" data-category="Предложенные">предложения</button>
+  <div class="filters">
+    <input
+      id="search"
+      type="search"
+      placeholder="Поиск по названию игры"
+      aria-label="Поиск по названию игры"
+    >
+
+    <select id="sort" aria-label="Сортировка таблицы">
+      <option value="game-asc">Название: 1–Я, А–Я</option>
+      <option value="game-desc">Название: Я–1, Я–А</option>
+      <option value="points-asc">Баллы: по возрастанию</option>
+      <option value="points-desc">Баллы: по убыванию</option>
+    </select>
   </div>
 
   <table>
@@ -82,46 +200,14 @@
   </table>
 
   <script>
-    // Одобренные лапки. У каждых должен быть уникальный id.
-    let challenges = [
-      {
-        id: "easy-example",
-        category: "Потные",
-        game: "Название игры",
-        requirement: "Пример потных требований",
-        points: 10
-      },
-      {
-        id: "hard-example",
-        category: "Мега",
-        game: "Название игры",
-        requirement: "Пример мега требований",
-        points: 50
-      },
-      {
-        id: "impossible-example",
-        category: "Сломанные",
-        game: "Название игры",
-        requirement: "Пример сломанных требований",
-        points: 100
-      }
-    ];
-
-    // Предложения, которые вы уже внесли в публичный список.
-    // После проверки меняйте category, points и status при необходимости.
-    let proposals = [
-      {
-        game: "Предложенная игра",
-        requirement: "Пример требования от пользователя",
-        category: "Трудные",
-        points: 25,
-        status: "На рассмотрении",
-        issueUrl: "https://github.com/Varkenor/OE_Games_Lapki/issues/1"
-      }
-    ];
+    let challenges = [];
+    let proposals = [];
+    let activeCategory = "Потные";
 
     const head = document.querySelector("#table-head");
     const rows = document.querySelector("#rows");
+    const searchInput = document.querySelector("#search");
+    const sortSelect = document.querySelector("#sort");
 
     function addCell(row, value, tag = "td") {
       const cell = document.createElement(tag);
@@ -131,21 +217,68 @@
     }
 
     function showCategory(category) {
+      activeCategory = category;
       head.replaceChildren();
       rows.replaceChildren();
 
+      const isProposals = category === "Предложенные";
       const headerRow = document.createElement("tr");
 
-      if (category === "Предложенные") {
-        ["Игра", "Требование", "Категория", "Баллы", "Статус"]
-          .forEach(label => addCell(headerRow, label, "th"));
+      const headings = isProposals
+        ? ["Игра", "Требование", "Категория", "Баллы", "Статус"]
+        : ["Игра", "Требование", "Кол-во баллов"];
 
-        head.appendChild(headerRow);
+      headings.forEach(label => addCell(headerRow, label, "th"));
+      head.appendChild(headerRow);
 
-        proposals.forEach(item => {
-          const row = document.createElement("tr");
+      const query = searchInput.value.trim().toLocaleLowerCase("ru");
+      const sortOrder = sortSelect.value;
+
+      let items = isProposals
+        ? [...proposals]
+        : challenges.filter(item => item.category === category);
+
+      items = items.filter(item =>
+        item.game.toLocaleLowerCase("ru").includes(query)
+      );
+
+      items.sort((a, b) => {
+        if (sortOrder === "game-asc") {
+          return a.game.localeCompare(b.game, "ru", { numeric: true });
+        }
+
+        if (sortOrder === "game-desc") {
+          return b.game.localeCompare(a.game, "ru", { numeric: true });
+        }
+
+        if (sortOrder === "points-asc") {
+          return Number(a.points) - Number(b.points);
+        }
+
+        if (sortOrder === "points-desc") {
+          return Number(b.points) - Number(a.points);
+        }
+
+        return 0;
+      });
+
+      if (items.length === 0) {
+        const row = document.createElement("tr");
+        const cell = addCell(row, "Ничего не найдено");
+        cell.colSpan = headings.length;
+        cell.classList.add("empty-message");
+        rows.appendChild(row);
+      }
+
+      const completed = JSON.parse(
+        localStorage.getItem("completedChallenges") || "[]"
+      );
+
+      items.forEach(item => {
+        const row = document.createElement("tr");
+
+        if (isProposals) {
           const gameCell = addCell(row, "");
-
           const link = document.createElement("a");
           link.textContent = item.game;
           link.href = item.issueUrl;
@@ -155,53 +288,37 @@
           addCell(row, item.category);
           addCell(row, String(item.points));
           addCell(row, item.status);
-          rows.appendChild(row);
-        });
-      } else {
-        ["Игра", "Требование", "Кол-во баллов"]
-          .forEach(label => addCell(headerRow, label, "th"));
+        } else {
+          row.classList.add("challenge-row");
 
-        head.appendChild(headerRow);
+          if (completed.includes(item.id)) {
+            row.classList.add("completed");
+          }
 
-        const completed = JSON.parse(
-          localStorage.getItem("completedChallenges") || "[]"
-        );
+          addCell(row, item.game);
+          addCell(row, item.requirement);
+          addCell(row, String(item.points));
 
-        challenges
-          .filter(item => item.category === category)
-          .forEach(item => {
-            const row = document.createElement("tr");
-            row.classList.add("challenge-row");
-            row.dataset.id = item.id;
+          row.addEventListener("click", () => {
+            const saved = JSON.parse(
+              localStorage.getItem("completedChallenges") || "[]"
+            );
 
-            if (completed.includes(item.id)) {
-              row.classList.add("completed");
-            }
+            const updated = saved.includes(item.id)
+              ? saved.filter(id => id !== item.id)
+              : [...saved, item.id];
 
-            addCell(row, item.game);
-            addCell(row, item.requirement);
-            addCell(row, String(item.points));
+            localStorage.setItem(
+              "completedChallenges",
+              JSON.stringify(updated)
+            );
 
-            row.addEventListener("click", () => {
-              const saved = JSON.parse(
-                localStorage.getItem("completedChallenges") || "[]"
-              );
-
-              const updated = saved.includes(item.id)
-                ? saved.filter(id => id !== item.id)
-                : [...saved, item.id];
-
-              localStorage.setItem(
-                "completedChallenges",
-                JSON.stringify(updated)
-              );
-
-              row.classList.toggle("completed");
-            });
-
-            rows.appendChild(row);
+            row.classList.toggle("completed");
           });
-      }
+        }
+
+        rows.appendChild(row);
+      });
 
       document.querySelectorAll(".tab").forEach(button => {
         button.classList.toggle(
@@ -217,20 +334,30 @@
       });
     });
 
+    searchInput.addEventListener("input", () => {
+      showCategory(activeCategory);
+    });
+
+    sortSelect.addEventListener("change", () => {
+      showCategory(activeCategory);
+    });
+
     fetch("./data.json")
-  .then(response => {
-    if (!response.ok) throw new Error("Не удалось загрузить data.json");
-    return response.json();
-  })
-  .then(data => {
-    challenges = data.challenges;
-    proposals = data.proposals;
-    showCategory("Простые");
-  })
-  .catch(error => {
-    console.error(error);
-    rows.textContent = "Не удалось загрузить таблицу.";
-  });
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Не удалось загрузить data.json");
+        }
+        return response.json();
+      })
+      .then(data => {
+        challenges = data.challenges || [];
+        proposals = data.proposals || [];
+        showCategory("Потные");
+      })
+      .catch(error => {
+        console.error(error);
+        rows.textContent = "Не удалось загрузить таблицу.";
+      });
   </script>
 </body>
 </html>
