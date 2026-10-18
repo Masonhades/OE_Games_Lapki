@@ -10,7 +10,8 @@ permissions:
 
 jobs:
   sync:
-    if: contains(github.event.issue.labels.*.name, 'предложение')
+    # Обрабатываем Issues, но не Pull Requests
+    if: ${{ !github.event.issue.pull_request }}
     runs-on: ubuntu-latest
 
     steps:
