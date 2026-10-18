@@ -10,6 +10,7 @@ body:
       placeholder: Название игры
     validations:
       required: true
+
   - type: textarea
     id: requirement
     attributes:
@@ -17,13 +18,15 @@ body:
       placeholder: Что нужно выполнить?
     validations:
       required: true
+
   - type: input
     id: points
     attributes:
       label: Кол-во баллов
-      placeholder: Например, 10
+      placeholder: "Например: 10"
     validations:
       required: true
+
   - type: dropdown
     id: category
     attributes:
