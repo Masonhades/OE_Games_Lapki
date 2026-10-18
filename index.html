@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Игровые испытания</title>
+  <style>
+    body { max-width: 900px; margin: 40px auto; padding: 0 16px;
+           font: 16px Arial, sans-serif; color: #222; }
+    .tabs { display: flex; gap: 8px; margin: 24px 0 16px; }
+    button { padding: 10px 16px; cursor: pointer; }
+    .tab.active { background: #222; color: white; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
+    th:last-child, td:last-child { text-align: right; }
+  </style>
+</head>
+<body>
+  <h1>Игровые испытания</h1>
+  <p>Предложите испытание — перед публикацией я проверю его и при необходимости изменю категорию.</p>
+  <a href="https://github.com/ВАШ-НИК/ИМЯ-РЕПОЗИТОРИЯ/issues/new/choose">
+    Предложить испытание
+  </a>
+
+  <div class="tabs">
+    <button class="tab active" data-category="Простые">Простые</button>
+    <button class="tab" data-category="Трудные">Трудные</button>
+    <button class="tab" data-category="Невозможные">Невозможные</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Игра</th><th>Требование</th><th>Кол-во баллов</th></tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+  <script>
+    const challenges = [
+      { category: "Простые", game: "Название игры", requirement: "Пример требования", points: 10 },
+      { category: "Трудные", game: "Название игры", requirement: "Другое требование", points: 50 },
+      { category: "Невозможные", game: "Название игры", requirement: "Сложнейшее требование", points: 100 }
+    ];
+
+    function showCategory(category) {
+      document.querySelector("#rows").innerHTML = challenges
+        .filter(item => item.category === category)
+        .map(item => `<tr><td>${item.game}</td><td>${item.requirement}</td><td>${item.points}</td></tr>`)
+        .join("");
+      document.querySelectorAll(".tab").forEach(button =>
+        button.classList.toggle("active", button.dataset.category === category)
+      );
+    }
+
+    document.querySelectorAll(".tab").forEach(button =>
+      button.addEventListener("click", () => showCategory(button.dataset.category))
+    );
+
+    showCategory("Простые");
+  </script>
+</body>
+</html>
