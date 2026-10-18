@@ -1,363 +1,50 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Таблица Лапок</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 16px;
-      background: #303030;
-      color: #fff;
-      font: 16px Arial, sans-serif;
-    }
-
-    h1 {
-      margin: 0 0 24px;
-      text-align: center;
-      font-size: 36px;
-    }
-
-    .tabs {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-
-    button,
-    .suggest-button,
-    select,
-    input {
-      font: inherit;
-      border: 1px solid #666;
-      border-radius: 12px;
-      transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
-    }
-
-    button {
-      padding: 10px 18px;
-      background: #444;
-      color: #fff;
-      cursor: pointer;
-    }
-
-    button:hover,
-    .suggest-button:hover {
-      background: #28633a;
-      box-shadow: 0 0 0 3px rgba(83, 200, 110, 0.2);
-    }
-
-    .tab.active {
-      background: #276738;
-      border-color: #48a85e;
-      color: #fff;
-    }
-
-    .suggest-wrap {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .suggest-button {
-      display: inline-block;
-      padding: 11px 20px;
-      background: #444;
-      color: #fff;
-      text-decoration: none;
-    }
-
-    .filters {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-
-    #search,
-    #sort {
-      width: 100%;
-      padding: 12px 14px;
-      background: #424242;
-      color: #fff;
-    }
-
-    #search::placeholder {
-      color: #ccc;
-    }
-
-    #sort option {
-      background: #424242;
-      color: #fff;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #383838;
-    }
-
-    th,
-    td {
-      padding: 10px;
-      border: 1px solid #666;
-      text-align: left;
-    }
-
-    th {
-      background: #444;
-    }
-
-    a {
-      color: #9bd6ff;
-    }
-
-    tbody tr.challenge-row {
-      cursor: pointer;
-    }
-
-    tbody tr.completed {
-      background: #285b36;
-    }
-
-    tbody tr:hover {
-      filter: brightness(1.15);
-    }
-
-    .empty-message {
-      color: #ccc;
-      text-align: center;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        margin-top: 24px;
-      }
-
-      h1 {
-        font-size: 30px;
-      }
-
-      th,
-      td {
-        padding: 7px;
-        font-size: 14px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header>
+  <main class="page">
     <h1>Таблица Лапок</h1>
 
-    <div class="tabs">
+    <nav class="tabs" aria-label="Категории таблицы">
       <button class="tab active" data-category="Потные">Потные</button>
       <button class="tab" data-category="Мега">Мега</button>
-      <button class="tab" data-category="Сломанные">Сломанные</button>
-      <button class="tab" data-category="Предложенные">Предложенные</button>
+      <button class="tab" data-category="Трудные">Трудные</button>
+      <button class="tab" data-category="Предложения">Предложения</button>
+    </nav>
+
+    <a
+      class="button suggest-button"
+      href="https://github.com/Varkenor/OE_Games_Lapki/issues/new?template=suggestion.yml"
+      target="_blank"
+      rel="noopener"
+    >Предложить свои</a>
+
+    <section class="controls" aria-label="Поиск и сортировка">
+      <input id="search" type="search" placeholder="Поиск по играм…">
+      <select id="sort" aria-label="Сортировка">
+        <option value="name-asc">Название: 1–9, А–Я</option>
+        <option value="name-desc">Название: 9–1, Я–А</option>
+        <option value="points-asc">Баллы: по возрастанию</option>
+        <option value="points-desc">Баллы: по убыванию</option>
+      </select>
+    </section>
+
+    <p class="hint">Нажмите на строку, чтобы отметить её выполненной. Отметка сохраняется в этом браузере.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead id="table-head"></thead>
+        <tbody id="table-body"></tbody>
+      </table>
+      <p id="empty-message" class="empty" hidden>В этой категории пока нет записей.</p>
     </div>
+  </main>
 
-    <div class="suggest-wrap">
-      <a
-        class="suggest-button"
-        href="https://github.com/ВАШ-НИК/ИМЯ-РЕПОЗИТОРИЯ/issues/new/choose"
-      >
-        Предложить свои
-      </a>
-    </div>
-  </header>
-
-  <div class="filters">
-    <input
-      id="search"
-      type="search"
-      placeholder="Поиск по названию игры"
-      aria-label="Поиск по названию игры"
-    >
-
-    <select id="sort" aria-label="Сортировка таблицы">
-      <option value="game-asc">Название: 1–Я, А–Я</option>
-      <option value="game-desc">Название: Я–1, Я–А</option>
-      <option value="points-asc">Баллы: по возрастанию</option>
-      <option value="points-desc">Баллы: по убыванию</option>
-    </select>
-  </div>
-
-  <table>
-    <thead id="table-head"></thead>
-    <tbody id="rows"></tbody>
-  </table>
-
-  <script>
-    let challenges = [];
-    let proposals = [];
-    let activeCategory = "Потные";
-
-    const head = document.querySelector("#table-head");
-    const rows = document.querySelector("#rows");
-    const searchInput = document.querySelector("#search");
-    const sortSelect = document.querySelector("#sort");
-
-    function addCell(row, value, tag = "td") {
-      const cell = document.createElement(tag);
-      cell.textContent = value;
-      row.appendChild(cell);
-      return cell;
-    }
-
-    function showCategory(category) {
-      activeCategory = category;
-      head.replaceChildren();
-      rows.replaceChildren();
-
-      const isProposals = category === "Предложенные";
-      const headerRow = document.createElement("tr");
-
-      const headings = isProposals
-        ? ["Игра", "Требование", "Категория", "Баллы", "Статус"]
-        : ["Игра", "Требование", "Кол-во баллов"];
-
-      headings.forEach(label => addCell(headerRow, label, "th"));
-      head.appendChild(headerRow);
-
-      const query = searchInput.value.trim().toLocaleLowerCase("ru");
-      const sortOrder = sortSelect.value;
-
-      let items = isProposals
-        ? [...proposals]
-        : challenges.filter(item => item.category === category);
-
-      items = items.filter(item =>
-        item.game.toLocaleLowerCase("ru").includes(query)
-      );
-
-      items.sort((a, b) => {
-        if (sortOrder === "game-asc") {
-          return a.game.localeCompare(b.game, "ru", { numeric: true });
-        }
-
-        if (sortOrder === "game-desc") {
-          return b.game.localeCompare(a.game, "ru", { numeric: true });
-        }
-
-        if (sortOrder === "points-asc") {
-          return Number(a.points) - Number(b.points);
-        }
-
-        if (sortOrder === "points-desc") {
-          return Number(b.points) - Number(a.points);
-        }
-
-        return 0;
-      });
-
-      if (items.length === 0) {
-        const row = document.createElement("tr");
-        const cell = addCell(row, "Ничего не найдено");
-        cell.colSpan = headings.length;
-        cell.classList.add("empty-message");
-        rows.appendChild(row);
-      }
-
-      const completed = JSON.parse(
-        localStorage.getItem("completedChallenges") || "[]"
-      );
-
-      items.forEach(item => {
-        const row = document.createElement("tr");
-
-        if (isProposals) {
-          const gameCell = addCell(row, "");
-          const link = document.createElement("a");
-          link.textContent = item.game;
-          link.href = item.issueUrl;
-          gameCell.appendChild(link);
-
-          addCell(row, item.requirement);
-          addCell(row, item.category);
-          addCell(row, String(item.points));
-          addCell(row, item.status);
-        } else {
-          row.classList.add("challenge-row");
-
-          if (completed.includes(item.id)) {
-            row.classList.add("completed");
-          }
-
-          addCell(row, item.game);
-          addCell(row, item.requirement);
-          addCell(row, String(item.points));
-
-          row.addEventListener("click", () => {
-            const saved = JSON.parse(
-              localStorage.getItem("completedChallenges") || "[]"
-            );
-
-            const updated = saved.includes(item.id)
-              ? saved.filter(id => id !== item.id)
-              : [...saved, item.id];
-
-            localStorage.setItem(
-              "completedChallenges",
-              JSON.stringify(updated)
-            );
-
-            row.classList.toggle("completed");
-          });
-        }
-
-        rows.appendChild(row);
-      });
-
-      document.querySelectorAll(".tab").forEach(button => {
-        button.classList.toggle(
-          "active",
-          button.dataset.category === category
-        );
-      });
-    }
-
-    document.querySelectorAll(".tab").forEach(button => {
-      button.addEventListener("click", () => {
-        showCategory(button.dataset.category);
-      });
-    });
-
-    searchInput.addEventListener("input", () => {
-      showCategory(activeCategory);
-    });
-
-    sortSelect.addEventListener("change", () => {
-      showCategory(activeCategory);
-    });
-
-    fetch("./data.json")
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("Не удалось загрузить data.json");
-        }
-        return response.json();
-      })
-      .then(data => {
-        challenges = data.challenges || [];
-        proposals = data.proposals || [];
-        showCategory("Потные");
-      })
-      .catch(error => {
-        console.error(error);
-        rows.textContent = "Не удалось загрузить таблицу.";
-      });
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>
