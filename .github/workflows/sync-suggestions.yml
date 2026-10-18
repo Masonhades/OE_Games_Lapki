@@ -1,0 +1,41 @@
+name: Синхронизация предложений
+
+on:
+  issues:
+    types: [opened, edited, labeled, unlabeled, reopened]
+
+permissions:
+  contents: write
+  issues: read
+
+jobs:
+  sync:
+    if: contains(github.event.issue.labels.*.name, 'предложение')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Получить файлы репозитория
+        uses: actions/checkout@v4
+
+      - name: Настроить Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Обновить data.json
+        env:
+          ISSUE_JSON: ${{ toJson(github.event.issue) }}
+        run: python scripts/sync_issue.py
+
+      - name: Сохранить изменения
+        run: |
+          if git diff --quiet -- data.json; then
+            echo "Изменений в таблице нет"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git commit -m "Обновить таблицу по Issue #${{ github.event.issue.number }}"
+          git push
