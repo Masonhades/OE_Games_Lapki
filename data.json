@@ -726,6 +726,12 @@
       "game": "ARMORED CORE™ VI FIRES OF RUBICON™",
       "requirement": "Достижение \"The Perfect Mercenary\".",
       "points": 0
+    },
+    {
+      "issue": 3,
+      "game": "Slay the spire 2",
+      "requirement": "пройти 10 возвышений на всех персонажах",
+      "points": 0
     }
   ],
   "Сломанные": [
@@ -833,13 +839,6 @@
       "requirement": "убить 2 драконов",
       "points": 102,
       "status": "отказано"
-    },
-    {
-      "issue": 3,
-      "game": "Slay the spire 2",
-      "requirement": "пройти 10 возвышений на всех персонажах",
-      "points": 0,
-      "status": "на рассмотрении"
     }
   ],
   "Трудные": []
