@@ -4,7 +4,7 @@ import re
 from pathlib import Path
 
 DATA_FILE = Path("data.json")
-VALID_CATEGORIES = {"Потные", "Мега", "Трудные"}
+VALID_CATEGORIES = {"Потные", "Мега", "Сломанные"}
 
 issue = json.loads(os.environ["ISSUE_JSON"])
 issue_number = issue["number"]
