@@ -486,8 +486,340 @@
     "points": 0
   }
 ],
-  "Мега": [],
-  "Сломанные": [],
+  "Мега": [
+  {
+    "game": "Brawlhalla",
+    "requirement": "1900+ очков.",
+    "points": 0
+  },
+  {
+    "game": "CS2",
+    "requirement": "16000+ в соревновательном режиме.",
+    "points": 0
+  },
+  {
+    "game": "Dark Souls PtDE/Remastered/Dark Souls II/II SotFS",
+    "requirement": "100% достижений.",
+    "points": 0
+  },
+  {
+    "game": "Elden Ring/Sekiro: Shadows Die Twice",
+    "requirement": "100% достижений.",
+    "points": 0
+  },
+  {
+    "game": "Dark Souls III",
+    "requirement": "Иметь пройденное НГ+7 и 100% достижений.",
+    "points": 0
+  },
+  {
+    "game": "Rocket League",
+    "requirement": "101%, пройдены базовые тренировки (а именно 3) на сложности: Звезда, на 100% или Платина 1 дивизион 4/Платина 2 дивизион 3 (любой режим, кроме 3 на 3).",
+    "points": 0
+  },
+  {
+    "game": "DOTA 2",
+    "requirement": "Ранг Ancient (Властелин) 5 stars.",
+    "points": 0
+  },
+  {
+    "game": "League of Legends",
+    "requirement": "Ранг Алмаз 4.",
+    "points": 0
+  },
+  {
+    "game": "Osu! / Osu!Mania",
+    "requirement": "5000pp, 95% acc.",
+    "points": 0
+  },
+  {
+    "game": "Overwatch",
+    "requirement": "\"Мастер\", 3500+ рейтинга.",
+    "points": 0
+  },
+  {
+    "game": "Warframe",
+    "requirement": "30 ранг \"True Master\" (Истинный мастер).",
+    "points": 0
+  },
+  {
+    "game": "A Hat in Time",
+    "requirement": "Достижение \"I Refuse to Die\".",
+    "points": 0
+  },
+  {
+    "game": "Divinity Original Sin 2",
+    "requirement": "Достижение \"Всё ради чести\".",
+    "points": 0
+  },
+  {
+    "game": "Escape From Tarkov",
+    "requirement": "Получить подсумок \"Каппа\".",
+    "points": 0
+  },
+  {
+    "game": "Baldur’s Gate III",
+    "requirement": "Достижение \"Критический удар\".",
+    "points": 0
+  },
+  {
+    "game": "Call of Duty",
+    "requirement": "Ранг Crimson в рейтинговой игре.",
+    "points": 0
+  },
+  {
+    "game": "Don't Starve / Don't Starve Together",
+    "requirement": "Запись убийства лунного чемпиона (Небесный отпрыск).",
+    "points": 0
+  },
+  {
+    "game": "The Binding of Isaac: Rebirth",
+    "requirement": "Наличие Dead God на одном сейве.",
+    "points": 0
+  },
+  {
+    "game": "ULTRAKILL",
+    "requirement": "P-ранг на всех уровнях сложности Brutal, 50-я волна Cyber Grind.",
+    "points": 0
+  },
+  {
+    "game": "Hollow Knight / Hollow Knight: Silksong",
+    "requirement": "100% достижений.",
+    "points": 0
+  },
+  {
+    "game": "Titanfall 2",
+    "requirement": "70% достижений + обязательное достижение \"...превзошёл учителя\".",
+    "points": 0
+  },
+  {
+    "game": "Sifu",
+    "requirement": "Достижение \"Блудный сын\" (Prodigal Child).",
+    "points": 0
+  },
+  {
+    "game": "Rain World",
+    "requirement": "Достижение \"Чемпион\".",
+    "points": 0
+  },
+  {
+    "game": "Risk of Rain 2",
+    "requirement": "75% достижений + 50% логбука.",
+    "points": 0
+  },
+  {
+    "game": "Warhammer 40,000: Rogue Trader",
+    "requirement": "Достижение \"Есть только война...\" или \"Чешется!\".",
+    "points": 0
+  },
+  {
+    "game": "Devil May Cry 5 / Devil May Cry 4 Special Edition",
+    "requirement": "100% достижений.",
+    "points": 0
+  },
+  {
+    "game": "Celeste",
+    "requirement": "202 клубнички.",
+    "points": 0
+  },
+  {
+    "game": "Neon White",
+    "requirement": "Прохождение Адской гонки с Белым.",
+    "points": 0
+  },
+  {
+    "game": "Planetary Annihilation: Titans",
+    "requirement": "1 на 1 ранг Алмаз.",
+    "points": 0
+  },
+  {
+    "game": "Furi",
+    "requirement": "100% достижений.",
+    "points": 0
+  },
+  {
+    "game": "Risk of Rain Returns",
+    "requirement": "100% достижений.",
+    "points": 0
+  },
+  {
+    "game": "Deadbolt",
+    "requirement": "100% достижений.",
+    "points": 0
+  },
+  {
+    "game": "Forts",
+    "requirement": "100% достижений.",
+    "points": 0
+  },
+  {
+    "game": "Stellaris",
+    "requirement": "125 достижений + обязательное достижение \"My name is Ozymandias\".",
+    "points": 0
+  },
+  {
+    "game": "Borderlands GOTY",
+    "requirement": "Достижение \"Big Tournament\".",
+    "points": 0
+  },
+  {
+    "game": "Final Fantasy VII Remake",
+    "requirement": "100% достижений.",
+    "points": 0
+  },
+  {
+    "game": "Metal Gear Solid V: The Phantom Pain",
+    "requirement": "100% достижений.",
+    "points": 0
+  },
+  {
+    "game": "Library of Ruina",
+    "requirement": "100% достижений.",
+    "points": 0
+  },
+  {
+    "game": "MGS Δ / MGS3",
+    "requirement": "Титул \"Фоксхаунд\".",
+    "points": 0
+  },
+  {
+    "game": "MGS 2 / MGS",
+    "requirement": "Титул \"Big Boss\".",
+    "points": 0
+  },
+  {
+    "game": "Everhood / Everhood 2",
+    "requirement": "100% достижений.",
+    "points": 0
+  },
+  {
+    "game": "The Witcher 3",
+    "requirement": "Достижение \"Ведьмак на тракте\".",
+    "points": 0
+  },
+  {
+    "game": "Bendy and the Ink Machine",
+    "requirement": "Достижение \"Valued Employee\".",
+    "points": 0
+  },
+  {
+    "game": "Muck",
+    "requirement": "Достижение \"Untouchable\".",
+    "points": 0
+  },
+  {
+    "game": "Inscryption",
+    "requirement": "Достижение \"Буря черепов\".",
+    "points": 0
+  },
+  {
+    "game": "Phasmophobia",
+    "requirement": "100% достижений.",
+    "points": 0
+  },
+  {
+    "game": "Echo Point Nova",
+    "requirement": "Достижение \"Under the Clouds Completionist\".",
+    "points": 0
+  },
+  {
+    "game": "ARMORED CORE™ VI FIRES OF RUBICON™",
+    "requirement": "Достижение \"The Perfect Mercenary\".",
+    "points": 0
+  }
+],
+  "Сломанные": [
+  {
+    "game": "Любая часть Dark Souls",
+    "requirement": "Пройти без урона (с записью).",
+    "points": 0
+  },
+  {
+    "game": "Hollow Knight / Hollow Knight: Silksong",
+    "requirement": "Пройти без урона (с записью).",
+    "points": 0
+  },
+  {
+    "game": "7 Days to Die",
+    "requirement": "100+ дней в соло на максимальной сложности без смертей.",
+    "points": 0
+  },
+  {
+    "game": "GTA Online",
+    "requirement": "Достижения \"Mastermind\" и \"Masterminds\".",
+    "points": 0
+  },
+  {
+    "game": "The Binding of Isaac: Rebirth",
+    "requirement": "Dead God на 3 сейвах.",
+    "points": 0
+  },
+  {
+    "game": "Warframe",
+    "requirement": "Наличие всех глифов серии \"Посвящение\" (усложнённые боссы).",
+    "points": 0
+  },
+  {
+    "game": "Risk of Rain 2",
+    "requirement": "Полностью закрыть логбук (+ скрин сохранения).",
+    "points": 0
+  },
+  {
+    "game": "Barotrauma",
+    "requirement": "Достижение \"Europa's Finest\".",
+    "points": 0
+  },
+  {
+    "game": "Warhammer 40,000: Rogue Trader",
+    "requirement": "Достижения \"Есть только война...\" и \"Чешется!\".",
+    "points": 0
+  },
+  {
+    "game": "Mewgenics",
+    "requirement": "100% достижений.",
+    "points": 0
+  },
+  {
+    "game": "Devil May Cry HD Collection",
+    "requirement": "100% достижений.",
+    "points": 0
+  },
+  {
+    "game": "Ultimate Custom Night",
+    "requirement": "Пройти 50/20 с записью.",
+    "points": 0
+  },
+  {
+    "game": "League of Legends",
+    "requirement": "Ранг Грандмастер или выше.",
+    "points": 0
+  },
+  {
+    "game": "Metal Gear Rising: Revengeance",
+    "requirement": "Достижение \"Stormbringer\".",
+    "points": 0
+  },
+  {
+    "game": "Dead Cells",
+    "requirement": "Пройти на 5 клетках без урона (с записью).",
+    "points": 0
+  },
+  {
+    "game": "Baldur's Gate 3",
+    "requirement": "Достижения \"Молот Врагов\", \"Никто не забыт\", \"Критический удар\".",
+    "points": 0
+  },
+  {
+    "game": "Balatro",
+    "requirement": "Достижение \"Всё невозможное\".",
+    "points": 0
+  },
+  {
+    "game": "White Knuckle",
+    "requirement": "20к метров в эндлесс-суперструктуре.",
+    "points": 0
+  }
+],
   "Предложения": [
     {
       "game": "Другая игра",
