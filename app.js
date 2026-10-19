@@ -1,4 +1,4 @@
-const categories = ["Потные", "Мега", "Трудные", "Предложения"];
+const categories = ["Потные", "Мега", "Сломанные", "Предложения"];
 
 const tableHead = document.querySelector("#table-head");
 const tableBody = document.querySelector("#table-body");
