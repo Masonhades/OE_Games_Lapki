@@ -34,6 +34,6 @@ body:
       options:
         - Потные
         - Мега
-        - Трудные
+        - Сломанные
     validations:
       required: true
