@@ -16,7 +16,7 @@ body:
       value: |
         **Пример изображения:**
 
-        ![Пример испытания](https://raw.githubusercontent.com/Varkenor/OE_Games_Lapki/main/image.png)
+        ![Где найти:](https://raw.githubusercontent.com/Varkenor/OE_Games_Lapki/main/image.png)
 
   - type: input
     id: game
