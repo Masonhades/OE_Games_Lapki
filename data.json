@@ -858,6 +858,14 @@
       "requirement": "Достижение \"Совершенство\"",
       "points": 30,
       "status": "принято"
+    },
+    {
+      "issue": 5,
+      "nickname": "rqkm99",
+      "game": "The End is Nigh",
+      "requirement": "100% достижений",
+      "points": 300,
+      "status": "на рассмотрении"
     }
   ]
 }
