@@ -7,9 +7,16 @@ body:
     id: nickname
     attributes:
       label: Ник
-      placeholder: Ник в дискорде (не на сервере), который будет отображаться в таблице
+      placeholder: Имя пользователя в дискорде (не на сервере), который будет отображаться в таблице
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        **Пример изображения:**
+
+        ![Пример испытания](https://raw.githubusercontent.com/Varkenor/OE_Games_Lapki/main/image.png)
 
   - type: input
     id: game
