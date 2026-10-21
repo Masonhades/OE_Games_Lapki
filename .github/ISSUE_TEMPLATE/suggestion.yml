@@ -4,6 +4,14 @@ title: "Предложение: "
 labels: ["предложение"]
 body:
   - type: input
+    id: nickname
+    attributes:
+      label: Ник
+      placeholder: Ник в дискорде (не на сервере), который будет отображаться в таблице
+    validations:
+      required: true
+
+  - type: input
     id: game
     attributes:
       label: Игра
