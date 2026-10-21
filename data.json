@@ -1,831 +1,835 @@
 {
   "Потные": [
-    {
-      "game": "Любая игра из стима (не из этого списка)",
-      "requirement": "150+ часов, 75% достижений. (можно несколько игр, можно через #записи)",
-      "points": 0
-    },
-    {
-      "game": "7 Days to Die",
-      "requirement": "75% достижений",
-      "points": 0
-    },
-    {
-      "game": "A Hat in Time",
-      "requirement": "Достижение \"Return Home\"",
-      "points": 0
-    },
-    {
-      "game": "Apex Legends",
-      "requirement": "Платина 3.",
-      "points": 0
-    },
-    {
-      "game": "Baldur’s Gate III",
-      "requirement": "Достижение \"Критический удар\"",
-      "points": 0
-    },
-    {
-      "game": "Barotrauma",
-      "requirement": "Достижение \"The End is the Beginning\"",
-      "points": 0
-    },
-    {
-      "game": "Brawlhalla",
-      "requirement": "Золото 1 (1390+ очков)",
-      "points": 0
-    },
-    {
-      "game": "Civilization",
-      "requirement": "70% достижений.",
-      "points": 0
-    },
-    {
-      "game": "CS2",
-      "requirement": "10000+ в соревновательном режиме.",
-      "points": 0
-    },
-    {
-      "game": "Cuphead",
-      "requirement": "85% достижений, обязательное доститижение \"Beat The Devil At His Own Game\"",
-      "points": 0
-    },
-    {
-      "game": "Dark Souls (I-III) / Elden Ring",
-      "requirement": "60% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Darkest Dungeon",
-      "requirement": "60% достижений",
-      "points": 0
-    },
-    {
-      "game": "Darkwood",
-      "requirement": "100% достижений",
-      "points": 0
-    },
-    {
-      "game": "Dead Cells",
-      "requirement": "80% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Deep Rock Galactic",
-      "requirement": "70% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Destiny 2",
-      "requirement": "80% триумфов (достижений).",
-      "points": 0
-    },
-    {
-      "game": "Divinity Origin Sin 2",
-      "requirement": "Иметь достижение \"божественный\"",
-      "points": 0
-    },
-    {
-      "game": "Geoguessr",
-      "requirement": "Дивизион золото 2+ и рейтинг 600+",
-      "points": 0
-    },
-    {
-      "game": "DOTA 2",
-      "requirement": "Crusader(Рыцарь) 5 stars.",
-      "points": 0
-    },
-    {
-      "game": "Dying Light / Dying Light 2",
-      "requirement": "20+ часов, 70% достижений, обязательное достижение \"Вот и все\" / \"Твой мир - твои правила\"",
-      "points": 0
-    },
-    {
-      "game": "Enter the Gungeon",
-      "requirement": "75% достижений",
-      "points": 0
-    },
-    {
-      "game": "Escape From Tarkov",
-      "requirement": "Выполнить серию квестов \"каратель\"",
-      "points": 0
-    },
-    {
-      "game": "Factorio",
-      "requirement": "Достижения \"Ядерная энергия\"",
-      "points": 0
-    },
-    {
-      "game": "Garry's mod",
-      "requirement": "Достижение \"Marathon\".",
-      "points": 0
-    },
-    {
-      "game": "Genshin Impact",
-      "requirement": "Закрыты 1-8 этажи бездны на все звезды.",
-      "points": 0
-    },
-    {
-      "game": "Geometry Dash",
-      "requirement": "2к старов, 40 демонов, 60 голд коинов.",
-      "points": 0
-    },
-    {
-      "game": "GTA Online / Red Dead Online",
-      "requirement": "100+ уровень.",
-      "points": 0
-    },
-    {
-      "game": "Hearthstone",
-      "requirement": "Платина 5.",
-      "points": 0
-    },
-    {
-      "game": "Hollow Knight",
-      "requirement": "Достижение \"Чистое прохождение\" + 65% всех достижений.",
-      "points": 0
-    },
-    {
-      "game": "Hotline Miami 2: Wrong Number",
-      "requirement": "100% достижений",
-      "points": 0
-    },
-    {
-      "game": "League of Legends",
-      "requirement": "Золото 1.",
-      "points": 0
-    },
-    {
-      "game": "Nuclear Throne",
-      "requirement": "Достижения \"fish can roll\" и \"go hard\"",
-      "points": 0
-    },
-    {
-      "game": "Osu!",
-      "requirement": "1500pp, 92% acc.",
-      "points": 0
-    },
-    {
-      "game": "Osu!Mania",
-      "requirement": "600pp, 80% acc.",
-      "points": 0
-    },
-    {
-      "game": "Overwatch",
-      "requirement": "Золотая+ Лига.",
-      "points": 0
-    },
-    {
-      "game": "Path of Exile",
-      "requirement": "70% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Pathologic 2",
-      "requirement": "Выполнить достижения \"пантомимы\" и \"имаго\"",
-      "points": 0
-    },
-    {
-      "game": "Rainbow Six Siege",
-      "requirement": "Золото 1.",
-      "points": 0
-    },
-    {
-      "game": "Risk of Rain 2",
-      "requirement": "60% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Slime Rancher",
-      "requirement": "Полностью готовая Слаймпедия.",
-      "points": 0
-    },
-    {
-      "game": "Starbound",
-      "requirement": "70% достижений (обязательное выполнить \"You're aMAZEing\")",
-      "points": 0
-    },
-    {
-      "game": "Stardew Valley",
-      "requirement": "Достижение \"Загадка падающих звезд\".",
-      "points": 0
-    },
-    {
-      "game": "Stoneshard",
-      "requirement": "Достижение \"не корми тролля\"",
-      "points": 0
-    },
-    {
-      "game": "Teamfight Tactics",
-      "requirement": "Платина 1",
-      "points": 0
-    },
-    {
-      "game": "Terraria",
-      "requirement": "75% достижений",
-      "points": 0
-    },
-    {
-      "game": "TES 5 Skyrim",
-      "requirement": "75% достижений",
-      "points": 0
-    },
-    {
-      "game": "The Binding of Isaac",
-      "requirement": "Достижение \"1000000%\".",
-      "points": 0
-    },
-    {
-      "game": "Warframe",
-      "requirement": "19 ранг \"Tiger\" (Тигр).",
-      "points": 0
-    },
-    {
-      "game": "Noita",
-      "requirement": "Достижение \"Победа!\"",
-      "points": 0
-    },
-    {
-      "game": "Satisfactory",
-      "requirement": "Достижение \"Вам это нужно?\"",
-      "points": 0
-    },
-    {
-      "game": "War Thunder",
-      "requirement": "Достижения \"(любая) коллекция\" х2, \"Ветеран\" и \"Судный день\".",
-      "points": 0
-    },
-    {
-      "game": "Call of Duty",
-      "requirement": "Ранг Платина в рейтинге",
-      "points": 0
-    },
-    {
-      "game": "Ready or not",
-      "requirement": "Пройти все миссии на S+",
-      "points": 0
-    },
-    {
-      "game": "Fallout: New Vegas",
-      "requirement": "60% достижений, \"Хардкор\" и \"Хозяин Каравана\"",
-      "points": 0
-    },
-    {
-      "game": "Rain World",
-      "requirement": "достижение \"Вознесение\"",
-      "points": 0
-    },
-    {
-      "game": "Warhammer 40,000: Rogue Trader",
-      "requirement": "достижение \"Гранд-финал\"",
-      "points": 0
-    },
-    {
-      "game": "Pizza Tower",
-      "requirement": "75% + 3 P-ranked достижения",
-      "points": 0
-    },
-    {
-      "game": "Peak",
-      "requirement": "75% + обязательные достижения - \"В тепле(Cool Cucumber Badge)\" и \"Прохлада(Bundled Up Badge)\"",
-      "points": 0
-    },
-    {
-      "game": "The Henry Stickmin Collection",
-      "requirement": "100% достижений",
-      "points": 0
-    },
-    {
-      "game": "Pacific Drive",
-      "requirement": "достижений \"Момент истины(The End of the Road)\"",
-      "points": 0
-    },
-    {
-      "game": "Nine Sols",
-      "requirement": "достижение\"Падающая звезда(Falling star)\"",
-      "points": 0
-    },
-    {
-      "game": "Warhammer 40,000: Space Marine 2",
-      "requirement": "достижение \"outbound payload\"",
-      "points": 0
-    },
-    {
-      "game": "Katana Zero",
-      "requirement": "достижение \"Gold Medal\"",
-      "points": 0
-    },
-    {
-      "game": "Exit The Gungeon",
-      "requirement": "75% достижений",
-      "points": 0
-    },
-    {
-      "game": "Planetary Annihilation: Titans",
-      "requirement": "1 на 1 ранг Золото",
-      "points": 0
-    },
-    {
-      "game": "MGS / MGS 2 / MGS 3 / MGS Δ",
-      "requirement": "60% достижений",
-      "points": 0
-    },
-    {
-      "game": "Furi",
-      "requirement": "85% + достижение \"What a Thrill\"",
-      "points": 0
-    },
-    {
-      "game": "Risk of Rain Returns",
-      "requirement": "Все достижений без providence trials",
-      "points": 0
-    },
-    {
-      "game": "Deadbolt",
-      "requirement": "85% достижений",
-      "points": 0
-    },
-    {
-      "game": "Slime Rancher 2",
-      "requirement": "Полностью готовая Слаймпедия",
-      "points": 0
-    },
-    {
-      "game": "Portal 2))))))",
-      "requirement": "100% достижений",
-      "points": 0
-    },
-    {
-      "game": "Forts",
-      "requirement": "70% достижений",
-      "points": 0
-    },
-    {
-      "game": "Sins of a Solar Empire: Rebellion",
-      "requirement": "60% достижений",
-      "points": 0
-    },
-    {
-      "game": "Terratech",
-      "requirement": "100% достижений",
-      "points": 0
-    },
-    {
-      "game": "Stellaris",
-      "requirement": "60% достижений",
-      "points": 0
-    },
-    {
-      "game": "Forager",
-      "requirement": "100% достижений",
-      "points": 0
-    },
-    {
-      "game": "AirMech",
-      "requirement": "50% достижений",
-      "points": 0
-    },
-    {
-      "game": "Nier Automata",
-      "requirement": "100% достижений",
-      "points": 0
-    },
-    {
-      "game": "Resident Evil 4(2023)",
-      "requirement": "достижение \"Proficient Agent\"",
-      "points": 0
-    },
-    {
-      "game": "DEATH STRANDING",
-      "requirement": "достижение \"Great Deliverer\"",
-      "points": 0
-    },
-    {
-      "game": "The Forest",
-      "requirement": "достижение \"Survive The Forest\"",
-      "points": 0
-    },
-    {
-      "game": "Inscryption",
-      "requirement": "достижение Драматический финал",
-      "points": 0
-    },
-    {
-      "game": "Plants vs zombies: Game of the year",
-      "requirement": "100% достижений",
-      "points": 0
-    },
-    {
-      "game": "Frostpunk",
-      "requirement": "100% достижений",
-      "points": 0
-    },
-    {
-      "game": "Cruelty Squad",
-      "requirement": "100% достижений",
-      "points": 0
-    },
-    {
-      "game": "Deaths Door",
-      "requirement": "достижение \"Academy of Umbrella\"",
-      "points": 0
-    },
-    {
-      "game": "Sleeping Dogs / definitive",
-      "requirement": "100% достижений",
-      "points": 0
-    },
-    {
-      "game": "Bomb Rush Cyberfunk",
-      "requirement": "достижение \"Mataan Tricked\"",
-      "points": 0
-    },
-    {
-      "game": "Tiny Tina Wonderlands",
-      "requirement": "100% достижений",
-      "points": 0
-    },
-    {
-      "game": "Roboquest",
-      "requirement": "достижение \"Ultimate Guardian\"",
-      "points": 0
-    },
-    {
-      "game": "Maneater",
-      "requirement": "достижение \"I can handle the truth\"",
-      "points": 0
-    },
-    {
-      "game": "Persona 3: Portable",
-      "requirement": "100% достижений",
-      "points": 0
-    },
-    {
-      "game": "FAITH: The Unholy Trinity",
-      "requirement": "100% достижений",
-      "points": 0
-    },
-    {
-      "game": "Bendy and the Ink Machine",
-      "requirement": "достижение \"To Hell and Back\"",
-      "points": 0
-    },
-    {
-      "game": "Outer Wilds",
-      "requirement": "достижение \"Призраки из машины\"",
-      "points": 0
-    },
-    {
-      "game": "White knuckle",
-      "requirement": "100% достижений",
-      "points": 0
-    },
-    {
-      "game": "Любая часть Resident Evil",
-      "requirement": "100% достижений",
-      "points": 0
-    }
-  ],
+  {
+    "game": "7 Days to Die",
+    "requirement": "75% достижений",
+    "points": 4
+  },
+  {
+    "game": "Любая игра из стима (не из этого списка)",
+    "requirement": "150+ часов, 75% достижений. (можно несколько игр, можно через #записи)",
+    "points": 3
+  },
+  {
+    "game": "A Hat in Time",
+    "requirement": "Достижение \"Return Home\"",
+    "points": 1
+  },
+  {
+    "game": "Apex Legends",
+    "requirement": "Платина 3.",
+    "points": 6
+  },
+  {
+    "game": "Baldur’s Gate III",
+    "requirement": "Достижение \"Критический удар\"",
+    "points": 3
+  },
+  {
+    "game": "Barotrauma",
+    "requirement": "Достижение \"The End is the Beginning\"",
+    "points": 4
+  },
+  {
+    "game": "Brawlhalla",
+    "requirement": "Золото 1 (1390+ очков)",
+    "points": 4
+  },
+  {
+    "game": "Civilization",
+    "requirement": "70% достижений.",
+    "points": 6
+  },
+  {
+    "game": "CS2",
+    "requirement": "10000+ в соревновательном режиме.",
+    "points": 5
+  },
+  {
+    "game": "Cuphead",
+    "requirement": "85% достижений, обязательное доститижение \"Beat The Devil At His Own Game\"",
+    "points": 7
+  },
+  {
+    "game": "Dark Souls (I-III) / Elden Ring",
+    "requirement": "60% достижений.",
+    "points": 5
+  },
+  {
+    "game": "Darkest Dungeon",
+    "requirement": "60% достижений",
+    "points": 6
+  },
+  {
+    "game": "Darkwood",
+    "requirement": "100% достижений",
+    "points": 5
+  },
+  {
+    "game": "Dead Cells",
+    "requirement": "80% достижений.",
+    "points": 7
+  },
+  {
+    "game": "Deep Rock Galactic",
+    "requirement": "70% достижений.",
+    "points": 5
+  },
+  {
+    "game": "Destiny 2",
+    "requirement": "80% триумфов (достижений).",
+    "points": 8
+  },
+  {
+    "game": "Divinity Origin Sin 2",
+    "requirement": "Иметь достижение \"божественный\"",
+    "points": 5
+  },
+  {
+    "game": "Geoguessr",
+    "requirement": "Дивизион золото 2+ и рейтинг 600+",
+    "points": 5
+  },
+  {
+    "game": "DOTA 2",
+    "requirement": "Crusader(Рыцарь) 5 stars.",
+    "points": 3
+  },
+  {
+    "game": "Dying Light / Dying Light 2",
+    "requirement": "20+ часов, 70% достижений, обязательное достижение \"Вот и все\" / \"Твой мир - твои правила\"",
+    "points": 4
+  },
+  {
+    "game": "Enter the Gungeon",
+    "requirement": "75% достижений",
+    "points": 6
+  },
+  {
+    "game": "Escape From Tarkov",
+    "requirement": "Выполнить серию квестов \"каратель\"",
+    "points": 8
+  },
+  {
+    "game": "Factorio",
+    "requirement": "Достижения \"Ядерная энергия\"",
+    "points": 3
+  },
+  {
+    "game": "Garry's mod",
+    "requirement": "Достижение \"Marathon\".",
+    "points": 2
+  },
+  {
+    "game": "Genshin Impact",
+    "requirement": "Закрыты 1-8 этажи бездны на все звезды.",
+    "points": 3
+  },
+  {
+    "game": "Geometry Dash",
+    "requirement": "2к старов, 40 демонов, 60 голд коинов.",
+    "points": 8
+  },
+  {
+    "game": "GTA Online / Red Dead Online",
+    "requirement": "100+ уровень.",
+    "points": 4
+  },
+  {
+    "game": "Hearthstone",
+    "requirement": "Платина 5.",
+    "points": 4
+  },
+  {
+    "game": "Hollow Knight",
+    "requirement": "Достижение \"Чистое прохождение\" + 65% всех достижений.",
+    "points": 7
+  },
+  {
+    "game": "Hotline Miami 2: Wrong Number",
+    "requirement": "100% достижений",
+    "points": 7
+  },
+  {
+    "game": "League of Legends",
+    "requirement": "Золото 1.",
+    "points": 5
+  },
+  {
+    "game": "Nuclear Throne",
+    "requirement": "Достижения \"fish can roll\" и \"go hard\"",
+    "points": 6
+  },
+  {
+    "game": "Osu!",
+    "requirement": "1500pp, 92% acc.",
+    "points": 5
+  },
+  {
+    "game": "Osu!Mania",
+    "requirement": "600pp, 80% acc.",
+    "points": 4
+  },
+  {
+    "game": "Overwatch",
+    "requirement": "Золотая+ Лига.",
+    "points": 5
+  },
+  {
+    "game": "Path of Exile",
+    "requirement": "70% достижений.",
+    "points": 7
+  },
+  {
+    "game": "Pathologic 2",
+    "requirement": "Выполнить достижения \"пантомимы\" и \"имаго\"",
+    "points": 4
+  },
+  {
+    "game": "Rainbow Six Siege",
+    "requirement": "Золото 1.",
+    "points": 5
+  },
+  {
+    "game": "Risk of Rain 2",
+    "requirement": "60% достижений.",
+    "points": 4
+  },
+  {
+    "game": "Slime Rancher",
+    "requirement": "Полностью готовая Слаймпедия.",
+    "points": 3
+  },
+  {
+    "game": "Starbound",
+    "requirement": "70% достижений (обязательное выполнить \"You're aMAZEing\")",
+    "points": 4
+  },
+  {
+    "game": "Stardew Valley",
+    "requirement": "Достижение \"Загадка падающих звезд\".",
+    "points": 3
+  },
+  {
+    "game": "Stoneshard",
+    "requirement": "Достижение \"не корми тролля\"",
+    "points": 4
+  },
+  {
+    "game": "Teamfight Tactics",
+    "requirement": "Платина 1",
+    "points": 6
+  },
+  {
+    "game": "Terraria",
+    "requirement": "75% достижений",
+    "points": 5
+  },
+  {
+    "game": "TES 5 Skyrim",
+    "requirement": "75% достижений",
+    "points": 4
+  },
+  {
+    "game": "The Binding of Isaac",
+    "requirement": "Достижение \"1000000%\".",
+    "points": 9
+  },
+  {
+    "game": "Warframe",
+    "requirement": "19 ранг \"Tiger\" (Тигр).",
+    "points": 6
+  },
+  {
+    "game": "Noita",
+    "requirement": "Достижение \"Победа!\"",
+    "points": 6
+  },
+  {
+    "game": "Satisfactory",
+    "requirement": "Достижение \"Вам это нужно?\"",
+    "points": 3
+  },
+  {
+    "game": "War Thunder",
+    "requirement": "Достижения \"(любая) коллекция\" х2, \"Ветеран\" и \"Судный день\".",
+    "points": 7
+  },
+  {
+    "game": "Call of Duty",
+    "requirement": "Ранг Платина в рейтинге",
+    "points": 6
+  },
+  {
+    "game": "Ready or not",
+    "requirement": "Пройти все миссии на S+",
+    "points": 9
+  },
+  {
+    "game": "Fallout: New Vegas",
+    "requirement": "60% достижений, \"Хардкор\" и \"Хозяин Каравана\"",
+    "points": 5
+  },
+  {
+    "game": "Rain World",
+    "requirement": "Достижение \"Вознесение\"",
+    "points": 5
+  },
+  {
+    "game": "Warhammer 40,000: Rogue Trader",
+    "requirement": "Достижение \"Гранд-финал\"",
+    "points": 6
+  },
+  {
+    "game": "Pizza Tower",
+    "requirement": "75% + 3 P-ranked достижения",
+    "points": 7
+  },
+  {
+    "game": "Peak",
+    "requirement": "75% + обязательные достижения - \"В тепле(Cool Cucumber Badge)\" и \"Прохлада(Bundled Up Badge)\"",
+    "points": 4
+  },
+  {
+    "game": "The Henry Stickmin Collection",
+    "requirement": "100% достижений",
+    "points": 2
+  },
+  {
+    "game": "Pacific Drive",
+    "requirement": "достижений \"Момент истины(The End of the Road)\"",
+    "points": 4
+  },
+  {
+    "game": "Nine Sols",
+    "requirement": "достижение\"Падающая звезда(Falling star)\"",
+    "points": 5
+  },
+  {
+    "game": "Warhammer 40,000: Space Marine 2",
+    "requirement": "достижение \"outbound payload\"",
+    "points": 3
+  },
+  {
+    "game": "Katana Zero",
+    "requirement": "достижение \"Gold Medal\"",
+    "points": 6
+  },
+  {
+    "game": "Exit The Gungeon",
+    "requirement": "75% достижений",
+    "points": 6
+  },
+  {
+    "game": "Planetary Annihilation: Titans",
+    "requirement": "1 на 1 ранг Золото",
+    "points": 5
+  },
+  {
+    "game": "MGS / MGS 2 / MGS 3 / MGS Δ",
+    "requirement": "60% достижений",
+    "points": 6
+  },
+  {
+    "game": "Furi",
+    "requirement": "85% + достижение \"What a Thrill\"",
+    "points": 8
+  },
+  {
+    "game": "Risk of Rain Returns",
+    "requirement": "Все достижений без providence trials",
+    "points": 6
+  },
+  {
+    "game": "Deadbolt",
+    "requirement": "85% достижений",
+    "points": 6
+  },
+  {
+    "game": "Slime Rancher 2",
+    "requirement": "Полностью готовая Слаймпедия",
+    "points": 3
+  },
+  {
+    "game": "Portal 2",
+    "requirement": "100% достижений",
+    "points": 4
+  },
+  {
+    "game": "Forts",
+    "requirement": "70% достижений",
+    "points": 5
+  },
+  {
+    "game": "Sins of a Solar Empire: Rebellion",
+    "requirement": "60% достижений",
+    "points": 5
+  },
+  {
+    "game": "Terratech",
+    "requirement": "100% достижений",
+    "points": 6
+  },
+  {
+    "game": "Stellaris",
+    "requirement": "60% достижений",
+    "points": 7
+  },
+  {
+    "game": "Forager",
+    "requirement": "100% достижений",
+    "points": 5
+  },
+  {
+    "game": "AirMech",
+    "requirement": "50% достижений",
+    "points": 3
+  },
+  {
+    "game": "Nier Automata",
+    "requirement": "100% достижений",
+    "points": 4
+  },
+  {
+    "game": "Resident Evil 4(2023)",
+    "requirement": "Достижение \"Proficient Agent\"",
+    "points": 6
+  },
+  {
+    "game": "DEATH STRANDING",
+    "requirement": "Достижение \"Great Deliverer\"",
+    "points": 5
+  },
+  {
+    "game": "The Forest",
+    "requirement": "Достижение \"Survive The Forest\"",
+    "points": 2
+  },
+  {
+    "game": "Inscryption",
+    "requirement": "Достижение Драматический финал",
+    "points": 3
+  },
+  {
+    "game": "Plants vs zombies: Game of the year",
+    "requirement": "100% достижений",
+    "points": 4
+  },
+  {
+    "game": "Frostpunk",
+    "requirement": "100% достижений",
+    "points": 8
+  },
+  {
+    "game": "Cruelty Squad",
+    "requirement": "100% достижений",
+    "points": 5
+  },
+  {
+    "game": "Deaths Door",
+    "requirement": "Достижение \"Academy of Umbrella\"",
+    "points": 5
+  },
+  {
+    "game": "Sleeping Dogs / definitive",
+    "requirement": "100% достижений",
+    "points": 5
+  },
+  {
+    "game": "Bomb Rush Cyberfunk",
+    "requirement": "Достижение \"Mataan Tricked\"",
+    "points": 4
+  },
+  {
+    "game": "Tiny Tina Wonderlands",
+    "requirement": "100% достижений",
+    "points": 5
+  },
+  {
+    "game": "Roboquest",
+    "requirement": "Достижение \"Ultimate Guardian\"",
+    "points": 6
+  },
+  {
+    "game": "Maneater",
+    "requirement": "Достижение \"I can handle the truth\"",
+    "points": 2
+  },
+  {
+    "game": "Persona 3: Portable",
+    "requirement": "100% достижений",
+    "points": 7
+  },
+  {
+    "game": "FAITH: The Unholy Trinity",
+    "requirement": "100% достижений",
+    "points": 6
+  },
+  {
+    "game": "Bendy and the Ink Machine",
+    "requirement": "Достижение \"To Hell and Back\"",
+    "points": 4
+  },
+  {
+    "game": "Outer Wilds",
+    "requirement": "Достижение \"Призраки из машины\"",
+    "points": 5
+  },
+  {
+    "game": "White knuckle",
+    "requirement": "100% достижений",
+    "points": 5
+  },
+  {
+    "game": "Любая часть Resident Evil",
+    "requirement": "100% достижений",
+    "points": 6
+  }
+],
   "Мега": [
-    {
-      "game": "Brawlhalla",
-      "requirement": "1900+ очков.",
-      "points": 0
-    },
-    {
-      "game": "CS2",
-      "requirement": "16000+ в соревновательном режиме.",
-      "points": 0
-    },
-    {
-      "game": "Dark Souls PtDE/Remastered/Dark Souls II/II SotFS",
-      "requirement": "100% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Elden Ring/Sekiro: Shadows Die Twice",
-      "requirement": "100% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Dark Souls III",
-      "requirement": "Иметь пройденное НГ+7 и 100% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Rocket League",
-      "requirement": "101%, пройдены базовые тренировки (а именно 3) на сложности: Звезда, на 100% или Платина 1 дивизион 4/Платина 2 дивизион 3 (любой режим, кроме 3 на 3).",
-      "points": 0
-    },
-    {
-      "game": "DOTA 2",
-      "requirement": "Ранг Ancient (Властелин) 5 stars.",
-      "points": 0
-    },
-    {
-      "game": "League of Legends",
-      "requirement": "Ранг Алмаз 4.",
-      "points": 0
-    },
-    {
-      "game": "Osu! / Osu!Mania",
-      "requirement": "5000pp, 95% acc.",
-      "points": 0
-    },
-    {
-      "game": "Overwatch",
-      "requirement": "\"Мастер\", 3500+ рейтинга.",
-      "points": 0
-    },
-    {
-      "game": "Warframe",
-      "requirement": "30 ранг \"True Master\" (Истинный мастер).",
-      "points": 0
-    },
-    {
-      "game": "A Hat in Time",
-      "requirement": "Достижение \"I Refuse to Die\".",
-      "points": 0
-    },
-    {
-      "game": "Divinity Original Sin 2",
-      "requirement": "Достижение \"Всё ради чести\".",
-      "points": 0
-    },
-    {
-      "game": "Escape From Tarkov",
-      "requirement": "Получить подсумок \"Каппа\".",
-      "points": 0
-    },
-    {
-      "game": "Baldur’s Gate III",
-      "requirement": "Достижение \"Критический удар\".",
-      "points": 0
-    },
-    {
-      "game": "Call of Duty",
-      "requirement": "Ранг Crimson в рейтинговой игре.",
-      "points": 0
-    },
-    {
-      "game": "Don't Starve / Don't Starve Together",
-      "requirement": "Запись убийства лунного чемпиона (Небесный отпрыск).",
-      "points": 0
-    },
-    {
-      "game": "The Binding of Isaac: Rebirth",
-      "requirement": "Наличие Dead God на одном сейве.",
-      "points": 0
-    },
-    {
-      "game": "ULTRAKILL",
-      "requirement": "P-ранг на всех уровнях сложности Brutal, 50-я волна Cyber Grind.",
-      "points": 0
-    },
-    {
-      "game": "Hollow Knight / Hollow Knight: Silksong",
-      "requirement": "100% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Titanfall 2",
-      "requirement": "70% достижений + обязательное достижение \"...превзошёл учителя\".",
-      "points": 0
-    },
-    {
-      "game": "Sifu",
-      "requirement": "Достижение \"Блудный сын\" (Prodigal Child).",
-      "points": 0
-    },
-    {
-      "game": "Rain World",
-      "requirement": "Достижение \"Чемпион\".",
-      "points": 0
-    },
-    {
-      "game": "Risk of Rain 2",
-      "requirement": "75% достижений + 50% логбука.",
-      "points": 0
-    },
-    {
-      "game": "Warhammer 40,000: Rogue Trader",
-      "requirement": "Достижение \"Есть только война...\" или \"Чешется!\".",
-      "points": 0
-    },
-    {
-      "game": "Devil May Cry 5 / Devil May Cry 4 Special Edition",
-      "requirement": "100% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Celeste",
-      "requirement": "202 клубнички.",
-      "points": 0
-    },
-    {
-      "game": "Neon White",
-      "requirement": "Прохождение Адской гонки с Белым.",
-      "points": 0
-    },
-    {
-      "game": "Planetary Annihilation: Titans",
-      "requirement": "1 на 1 ранг Алмаз.",
-      "points": 0
-    },
-    {
-      "game": "Furi",
-      "requirement": "100% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Risk of Rain Returns",
-      "requirement": "100% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Deadbolt",
-      "requirement": "100% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Forts",
-      "requirement": "100% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Stellaris",
-      "requirement": "125 достижений + обязательное достижение \"My name is Ozymandias\".",
-      "points": 0
-    },
-    {
-      "game": "Borderlands GOTY",
-      "requirement": "Достижение \"Big Tournament\".",
-      "points": 0
-    },
-    {
-      "game": "Final Fantasy VII Remake",
-      "requirement": "100% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Metal Gear Solid V: The Phantom Pain",
-      "requirement": "100% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Library of Ruina",
-      "requirement": "100% достижений.",
-      "points": 0
-    },
-    {
-      "game": "MGS Δ / MGS3",
-      "requirement": "Титул \"Фоксхаунд\".",
-      "points": 0
-    },
-    {
-      "game": "MGS 2 / MGS",
-      "requirement": "Титул \"Big Boss\".",
-      "points": 0
-    },
-    {
-      "game": "Everhood / Everhood 2",
-      "requirement": "100% достижений.",
-      "points": 0
-    },
-    {
-      "game": "The Witcher 3",
-      "requirement": "Достижение \"Ведьмак на тракте\".",
-      "points": 0
-    },
-    {
-      "game": "Bendy and the Ink Machine",
-      "requirement": "Достижение \"Valued Employee\".",
-      "points": 0
-    },
-    {
-      "game": "Muck",
-      "requirement": "Достижение \"Untouchable\".",
-      "points": 0
-    },
-    {
-      "game": "Inscryption",
-      "requirement": "Достижение \"Буря черепов\".",
-      "points": 0
-    },
-    {
-      "game": "Phasmophobia",
-      "requirement": "100% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Echo Point Nova",
-      "requirement": "Достижение \"Under the Clouds Completionist\".",
-      "points": 0
-    },
-    {
-      "game": "ARMORED CORE™ VI FIRES OF RUBICON™",
-      "requirement": "Достижение \"The Perfect Mercenary\".",
-      "points": 0
-    },
-    {
-      "issue": 3,
-      "game": "Slay the spire 2",
-      "requirement": "пройти 10 возвышений на всех персонажах",
-      "points": 0
-    }
-  ],
+  {
+    "game": "Brawlhalla",
+    "requirement": "1900+ очков.",
+    "points": 42
+  },
+  {
+    "game": "CS2",
+    "requirement": "16000+ в соревновательном режиме.",
+    "points": 43
+  },
+  {
+    "game": "Dark Souls PtDE/Remastered",
+    "requirement": "100% достижений.",
+    "points": 38
+  },
+  {
+    "game": "Dark Souls Il/II SotFS",
+    "requirement": "100% достижений.",
+    "points": 38
+  },
+  {
+    "game": "Elden Ring",
+    "requirement": "100% достижений.",
+    "points": 35
+  },
+  {
+    "game": "Sekiro: Shadows Die Twice",
+    "requirement": "100% достижений.",
+    "points": 35
+  },
+  {
+    "game": "Dark Souls III",
+    "requirement": "Иметь пройденное НГ+7 и 100% достижений.",
+    "points": 46
+  },
+  {
+    "game": "Rocket League",
+    "requirement": "101%, пройдены базовые тренировки (а именно 3) на сложности: Звезда, на 100% или Платина 1 дивизион 4/Платина 2 дивизион 3 (любой режим, кроме 3 на 3).",
+    "points": 34
+  },
+  {
+    "game": "DOTA 2",
+    "requirement": "ранг Ancient (властелин) 5 stars.",
+    "points": 41
+  },
+  {
+    "game": "League of Legends",
+    "requirement": "ранг Алмаз 4.",
+    "points": 45
+  },
+  {
+    "game": "Osu! / Osu!Mania",
+    "requirement": "5000pp, 95% acc.",
+    "points": 47
+  },
+  {
+    "game": "Overwatch",
+    "requirement": "\"Мастер\", 3500+ рейтинга.",
+    "points": 46
+  },
+  {
+    "game": "Warframe",
+    "requirement": "30 ранг \"True Master\" (Истинный мастер).",
+    "points": 40
+  },
+  {
+    "game": "A Hat in Time",
+    "requirement": "Достижение \"I Refuse to Die\"",
+    "points": 39
+  },
+  {
+    "game": "Divinity Origin Sin 2",
+    "requirement": "Достижение \"всё ради чести\"",
+    "points": 44
+  },
+  {
+    "game": "Escape From Tarkov",
+    "requirement": "Получить подсумок \"Каппа\".",
+    "points": 50
+  },
+  {
+    "game": "Baldur’s Gate III",
+    "requirement": "Достижение \"Критический удар\"",
+    "points": 42
+  },
+  {
+    "game": "Call of Duty",
+    "requirement": "Ранг Crimson в рейтинговой игре",
+    "points": 46
+  },
+  {
+    "game": "Dont Starve/Don't Starve Together",
+    "requirement": "Запись убийства лунного чемпиона (Небесный отпрыск)",
+    "points": 38
+  },
+  {
+    "game": "The Binding of Isaac: Rebirth",
+    "requirement": "Наличие Dead God на одном сейве",
+    "points": 50
+  },
+  {
+    "game": "Ultrakill",
+    "requirement": "P-ранг на всех уровнях сложности Brutal, 50 волна cybergrind",
+    "points": 49
+  },
+  {
+    "game": "Hollow knight / silksong",
+    "requirement": "100% достижений",
+    "points": 44
+  },
+  {
+    "game": "Titanfall 2",
+    "requirement": "70% достижений + обязательное достижение \"...превзошёл учителя\"",
+    "points": 32
+  },
+  {
+    "game": "Sifu",
+    "requirement": "достижение \"блудный сын\" (prodigal child)",
+    "points": 36
+  },
+  {
+    "game": "Rain World",
+    "requirement": "достижение \"Чемпион\"",
+    "points": 38
+  },
+  {
+    "game": "Risk of Rain 2",
+    "requirement": "75% достижений + 50% логбука",
+    "points": 31
+  },
+  {
+    "game": "Warhammer 40,000: Rogue Trader",
+    "requirement": "достижения \"Есть только война...\" или \"Чешется!\"",
+    "points": 39
+  },
+  {
+    "game": "Devil May Cry 5 / Devil May Cry 4 Special Edition",
+    "requirement": "100% достижений",
+    "points": 47
+  },
+  {
+    "game": "Celeste",
+    "requirement": "202 клубнички",
+    "points": 50
+  },
+  {
+    "game": "Neon White",
+    "requirement": "прохождение Адской гонки с Белым",
+    "points": 45
+  },
+  {
+    "game": "Planetary Annihilation: Titans",
+    "requirement": "1 на 1 ранг Алмаз",
+    "points": 41
+  },
+  {
+    "game": "Furi",
+    "requirement": "100% достижений",
+    "points": 43
+  },
+  {
+    "game": "Risk of Rain Returns",
+    "requirement": "100% достижений",
+    "points": 42
+  },
+  {
+    "game": "Deadbolt",
+    "requirement": "100% достижений",
+    "points": 39
+  },
+  {
+    "game": "Forts",
+    "requirement": "100% достижений",
+    "points": 40
+  },
+  {
+    "game": "Stellaris",
+    "requirement": "125 достижений + обязательное достижение \"My name is Ozymandias\"",
+    "points": 44
+  },
+  {
+    "game": "Borderlands GOTY",
+    "requirement": "достижение \"Big Tournament\"",
+    "points": 28
+  },
+  {
+    "game": "final fantasy 7 remake",
+    "requirement": "100% достижений",
+    "points": 37
+  },
+  {
+    "game": "MGS5 phantom pain",
+    "requirement": "100% достижений",
+    "points": 39
+  },
+  {
+    "game": "Library of ruina",
+    "requirement": "100% достижений",
+    "points": 41
+  },
+  {
+    "game": "MGSΔ / MGS3",
+    "requirement": "Титул \"Фоксхаунд\"",
+    "points": 46
+  },
+  {
+    "game": "MGS 2 / MGS",
+    "requirement": "Титул \"Big Boss\"",
+    "points": 49
+  },
+  {
+    "game": "Everhood / Everhood 2",
+    "requirement": "100% достижений",
+    "points": 47
+  },
+  {
+    "game": "The Witcher 3",
+    "requirement": "Достижение \"Ведьмак на тракте\"",
+    "points": 35
+  },
+  {
+    "game": "Bendy and the Ink Machine",
+    "requirement": "достижение \"Valued Employee\"",
+    "points": 39
+  },
+  {
+    "game": "Muck",
+    "requirement": "достижение \"Untouchable\"",
+    "points": 42
+  },
+  {
+    "game": "Inscryption",
+    "requirement": "достижение \"Буря черепов\"",
+    "points": 48
+  },
+  {
+    "game": "Phasmophobia",
+    "requirement": "100% достижений",
+    "points": 36
+  },
+  {
+    "game": "Echo Point Nova",
+    "requirement": "достижение \"Under the clouds completionist\"",
+    "points": 43
+  },
+  {
+    "game": "ARMORED CORE™ VI FIRES OF RUBICON™",
+    "requirement": "достижение \"The Perfect Mercenary\"",
+    "points": 46
+  }
+],
   "Сломанные": [
-    {
-      "game": "Любая часть Dark Souls",
-      "requirement": "Пройти без урона (с записью).",
-      "points": 0
-    },
-    {
-      "game": "Hollow Knight / Hollow Knight: Silksong",
-      "requirement": "Пройти без урона (с записью).",
-      "points": 0
-    },
-    {
-      "game": "7 Days to Die",
-      "requirement": "100+ дней в соло на максимальной сложности без смертей.",
-      "points": 0
-    },
-    {
-      "game": "GTA Online",
-      "requirement": "Достижения \"Mastermind\" и \"Masterminds\".",
-      "points": 0
-    },
-    {
-      "game": "The Binding of Isaac: Rebirth",
-      "requirement": "Dead God на 3 сейвах.",
-      "points": 0
-    },
-    {
-      "game": "Warframe",
-      "requirement": "Наличие всех глифов серии \"Посвящение\" (усложнённые боссы).",
-      "points": 0
-    },
-    {
-      "game": "Risk of Rain 2",
-      "requirement": "Полностью закрыть логбук (+ скрин сохранения).",
-      "points": 0
-    },
-    {
-      "game": "Barotrauma",
-      "requirement": "Достижение \"Europa's Finest\".",
-      "points": 0
-    },
-    {
-      "game": "Warhammer 40,000: Rogue Trader",
-      "requirement": "Достижения \"Есть только война...\" и \"Чешется!\".",
-      "points": 0
-    },
-    {
-      "game": "Mewgenics",
-      "requirement": "100% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Devil May Cry HD Collection",
-      "requirement": "100% достижений.",
-      "points": 0
-    },
-    {
-      "game": "Ultimate Custom Night",
-      "requirement": "Пройти 50/20 с записью.",
-      "points": 0
-    },
-    {
-      "game": "League of Legends",
-      "requirement": "Ранг Грандмастер или выше.",
-      "points": 0
-    },
-    {
-      "game": "Metal Gear Rising: Revengeance",
-      "requirement": "Достижение \"Stormbringer\".",
-      "points": 0
-    },
-    {
-      "game": "Dead Cells",
-      "requirement": "Пройти на 5 клетках без урона (с записью).",
-      "points": 0
-    },
-    {
-      "game": "Baldur's Gate 3",
-      "requirement": "Достижения \"Молот Врагов\", \"Никто не забыт\", \"Критический удар\".",
-      "points": 0
-    },
-    {
-      "game": "Balatro",
-      "requirement": "Достижение \"Всё невозможное\".",
-      "points": 0
-    },
-    {
-      "game": "White Knuckle",
-      "requirement": "20к метров в эндлесс-суперструктуре.",
-      "points": 0
-    }
-  ],
+  {
+    "game": "Любая часть Dark Souls",
+    "requirement": "Без урона (с записью)",
+    "points": 1000
+  },
+  {
+    "game": "Hollow knight / silksong",
+    "requirement": "Без урона (с записью)",
+    "points": 900
+  },
+  {
+    "game": "7 days to die",
+    "requirement": "100+ дней в соло на максимальной сложности без смертей",
+    "points": 750
+  },
+  {
+    "game": "GTA Online",
+    "requirement": "Достижения Mastermind и Masterminds",
+    "points": 900
+  },
+  {
+    "game": "The Binding of Isaac: Rebirth",
+    "requirement": "Dead god на 3 сейвах",
+    "points": 1000
+  },
+  {
+    "game": "Warframe",
+    "requirement": "Наличие всех глифов серии \"Посвящение\" (усложненные боссы)",
+    "points": 650
+  },
+  {
+    "game": "Risk of Rain 2",
+    "requirement": "Полностью закрыть логбук (+скрин сохранения)",
+    "points": 550
+  },
+  {
+    "game": "Barotrauma",
+    "requirement": "Достижение \"Europa's Finest\"",
+    "points": 600
+  },
+  {
+    "game": "Warhammer 40,000: Rogue Trader",
+    "requirement": "Достижения \"Есть только война...\" и \"Чешется!\"",
+    "points": 600
+  },
+  {
+    "game": "Mewgenics",
+    "requirement": "100% достижений",
+    "points": 700
+  },
+  {
+    "game": "Devil May Cry HD Collection",
+    "requirement": "100% достижений",
+    "points": 850
+  },
+  {
+    "game": "Ultimate Custom Night",
+    "requirement": "Пройти 50/20 с записью",
+    "points": 1000
+  },
+  {
+    "game": "League of Legends",
+    "requirement": "Ранг Грандмастер или выше",
+    "points": 950
+  },
+  {
+    "game": "Metal Gear Rising: Revengence",
+    "requirement": "Достижение \"Stormbringer\"",
+    "points": 800
+  },
+  {
+    "game": "Dead Cells",
+    "requirement": "5 клеток без урона (с записью)",
+    "points": 950
+  },
+  {
+    "game": "Baldur's Gate 3",
+    "requirement": "Достижения \"Молот Врагов\", \"Никто не забыт\", \"Критический удар\"",
+    "points": 700
+  },
+  {
+    "game": "Balatro",
+    "requirement": "Достижение \"Всё невозможное\"",
+    "points": 900
+  },
+  {
+    "game": "White Knuckle",
+    "requirement": "20к метров в эндлесс суперструктуре",
+    "points": 950
+  }
+],
   "Предложения": [
     {
       "game": "Другая игра",
@@ -840,6 +844,5 @@
       "points": 102,
       "status": "отказано"
     }
-  ],
-  "Трудные": []
+  ]
 }
