@@ -10,7 +10,6 @@ permissions:
 
 jobs:
   sync:
-    # Обрабатываем Issues, но не Pull Requests
     if: ${{ !github.event.issue.pull_request }}
     runs-on: ubuntu-latest
 
