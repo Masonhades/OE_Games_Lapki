@@ -30,14 +30,14 @@ body:
     id: requirement
     attributes:
       label: Требование
-      placeholder: Что нужно выполнить? Пояснения писать ниже.
+      placeholder: Что нужно выполнить?
     validations:
       required: true
 
   - type: textarea
     attributes:
       label: Пояснение
-      placeholder: В подробностях описать требования для получения?
+      placeholder: В подробностях описать требования для получения
     validations:
       required: False
       
