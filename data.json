@@ -736,6 +736,13 @@
       "game": "ARMORED CORE™ VI FIRES OF RUBICON™",
       "requirement": "достижение \"The Perfect Mercenary\"",
       "points": 46
+    },
+    {
+      "issue": 4,
+      "nickname": "w1nter7",
+      "game": "Stardew Valley",
+      "requirement": "Достижение \"Совершенство\"",
+      "points": 30
     }
   ],
   "Сломанные": [
@@ -850,7 +857,7 @@
       "game": "Stardew Valley",
       "requirement": "Достижение \"Совершенство\"",
       "points": 30,
-      "status": "на рассмотрении"
+      "status": "принято"
     }
   ]
 }
