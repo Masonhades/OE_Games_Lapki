@@ -42,6 +42,15 @@ body:
     validations:
       required: true
 
+  - type: markdown
+    attributes:
+      value: |
+        **Максимум баллов в категории:**
+        - Потные: до 10
+        - Мега: до 50
+        - Сломанные: до 500
+
+
   - type: dropdown
     id: category
     attributes:
