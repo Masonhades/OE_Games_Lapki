@@ -14,7 +14,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        **Пример изображения:**
+        **Где найти:**
 
         ![Где найти:](https://raw.githubusercontent.com/Varkenor/OE_Games_Lapki/main/image.png)
 
