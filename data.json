@@ -861,6 +861,14 @@
       "requirement": "100% достижений",
       "points": 300,
       "status": "на рассмотрении"
+    },
+    {
+      "issue": 6,
+      "nickname": "letlole",
+      "game": "A Dance of Fire and Ice",
+      "requirement": "12 Скоростных испытаний (World 1-12)",
+      "points": 4,
+      "status": "на рассмотрении"
     }
   ]
 }
