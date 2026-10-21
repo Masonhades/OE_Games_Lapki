@@ -4,6 +4,8 @@ const tableHead = document.querySelector("#table-head");
 const tableBody = document.querySelector("#table-body");
 const searchInput = document.querySelector("#search");
 const sortSelect = document.querySelector("#sort");
+const proposalStatusFilter = document.querySelector("#proposal-status-filter");
+const statusSelect = document.querySelector("#status-filter");
 const emptyMessage = document.querySelector("#empty-message");
 const tabs = [...document.querySelectorAll(".tab")];
 
@@ -36,6 +38,8 @@ function escapeHtml(value) {
 
 function render() {
   const isSuggestions = currentCategory === "Предложения";
+  proposalStatusFilter.hidden = !isSuggestions;
+
   const completed = getCompleted();
   const query = searchInput.value.trim().toLocaleLowerCase("ru");
   const sortMode = sortSelect.value;
@@ -53,6 +57,13 @@ function render() {
   let rows = [...(data[currentCategory] || [])].filter(item =>
     String(item.game).toLocaleLowerCase("ru").includes(query)
   );
+
+  if (isSuggestions && statusSelect.value) {
+    rows = rows.filter(item =>
+      String(item.status || "на рассмотрении")
+        .toLocaleLowerCase("ru") === statusSelect.value
+    );
+  }
 
   rows.sort((a, b) => {
     if (sortMode === "name-asc") {
@@ -121,15 +132,18 @@ function render() {
 tabs.forEach(tab => {
   tab.addEventListener("click", () => {
     currentCategory = tab.dataset.category;
+
     tabs.forEach(item => {
       item.classList.toggle("active", item === tab);
     });
+
     render();
   });
 });
 
 searchInput.addEventListener("input", render);
 sortSelect.addEventListener("change", render);
+statusSelect.addEventListener("change", render);
 
 fetch("data.json")
   .then(response => {
