@@ -742,92 +742,92 @@
   {
     "game": "Любая часть Dark Souls",
     "requirement": "Без урона (с записью)",
-    "points": 1000
+    "points": 300
   },
   {
     "game": "Hollow knight / silksong",
     "requirement": "Без урона (с записью)",
-    "points": 900
+    "points": 270
   },
   {
     "game": "7 days to die",
     "requirement": "100+ дней в соло на максимальной сложности без смертей",
-    "points": 750
+    "points": 250
   },
   {
     "game": "GTA Online",
     "requirement": "Достижения Mastermind и Masterminds",
-    "points": 900
+    "points": 270
   },
   {
     "game": "The Binding of Isaac: Rebirth",
     "requirement": "Dead god на 3 сейвах",
-    "points": 1000
+    "points": 300
   },
   {
     "game": "Warframe",
     "requirement": "Наличие всех глифов серии \"Посвящение\" (усложненные боссы)",
-    "points": 650
+    "points": 250
   },
   {
     "game": "Risk of Rain 2",
     "requirement": "Полностью закрыть логбук (+скрин сохранения)",
-    "points": 550
+    "points": 200
   },
   {
     "game": "Barotrauma",
     "requirement": "Достижение \"Europa's Finest\"",
-    "points": 600
+    "points": 200
   },
   {
     "game": "Warhammer 40,000: Rogue Trader",
     "requirement": "Достижения \"Есть только война...\" и \"Чешется!\"",
-    "points": 600
+    "points": 180
   },
   {
     "game": "Mewgenics",
     "requirement": "100% достижений",
-    "points": 700
+    "points": 210
   },
   {
     "game": "Devil May Cry HD Collection",
     "requirement": "100% достижений",
-    "points": 850
+    "points": 240
   },
   {
     "game": "Ultimate Custom Night",
     "requirement": "Пройти 50/20 с записью",
-    "points": 1000
+    "points": 300
   },
   {
     "game": "League of Legends",
     "requirement": "Ранг Грандмастер или выше",
-    "points": 950
+    "points": 300
   },
   {
     "game": "Metal Gear Rising: Revengence",
     "requirement": "Достижение \"Stormbringer\"",
-    "points": 800
+    "points": 200
   },
   {
     "game": "Dead Cells",
     "requirement": "5 клеток без урона (с записью)",
-    "points": 950
+    "points": 250
   },
   {
     "game": "Baldur's Gate 3",
     "requirement": "Достижения \"Молот Врагов\", \"Никто не забыт\", \"Критический удар\"",
-    "points": 700
+    "points": 300
   },
   {
     "game": "Balatro",
     "requirement": "Достижение \"Всё невозможное\"",
-    "points": 900
+    "points": 200
   },
   {
     "game": "White Knuckle",
     "requirement": "20к метров в эндлесс суперструктуре",
-    "points": 950
+    "points": 270
   }
 ],
   "Предложения": [
