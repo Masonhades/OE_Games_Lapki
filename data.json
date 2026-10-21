@@ -137,7 +137,7 @@
     },
     {
       "game": "Hollow Knight",
-      "requirement": "Достижение \"Чистое прохождение\" + 65% всех достижений.",
+      "requirement": "Достижение \"Чистое прохождение\".",
       "points": 7
     },
     {
@@ -226,7 +226,7 @@
       "points": 4
     },
     {
-      "game": "The Binding of Isaac",
+      "game": "The Binding of Isaac: Rebirth",
       "requirement": "Достижение \"1000000%\".",
       "points": 9
     },
