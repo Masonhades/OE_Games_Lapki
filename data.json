@@ -869,6 +869,14 @@
       "requirement": "12 Скоростных испытаний (World 1-12)",
       "points": 4,
       "status": "на рассмотрении"
+    },
+    {
+      "issue": 7,
+      "nickname": "zovyt_vovan",
+      "game": "darkest dungeon 1",
+      "requirement": "пройти сложность \"кровавая луна\" без смертей включая ваншот атаку сердца тьмы.",
+      "points": 200,
+      "status": "на рассмотрении"
     }
   ]
 }
