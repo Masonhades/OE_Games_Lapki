@@ -510,12 +510,14 @@ function renderSteamResult() {
   const { profile, steam } = lastCheck;
   const result = countPoints(steam, getMarks());
 
-  // При пересчёте раскрытые списки остаются раскрытыми.
-  const open = new Set(
-    [...steamResult.querySelectorAll("details[open]")].map(details => details.dataset.key)
+  // При пересчёте списки остаются раскрытыми или свёрнутыми, как были.
+  // Впервые показанный список засчитанных раскрыт, остальные свёрнуты.
+  const wasOpen = new Map(
+    [...steamResult.querySelectorAll("details[data-key]")]
+      .map(details => [details.dataset.key, details.open])
   );
   const details = (key, summary, entries, column) => entries.length ? `
-    <details data-key="${key}" ${open.has(key) ? "open" : ""}>
+    <details data-key="${key}" ${wasOpen.get(key) ?? key === "counted" ? "open" : ""}>
       <summary>${summary} (${entries.length})</summary>
       ${rowsTable(entries, column)}
     </details>
@@ -530,7 +532,7 @@ function renderSteamResult() {
     <p class="steam-total">Итого: <strong>${result.total}</strong> баллов</p>
 
     ${result.counted.length
-      ? rowsTable(result.counted, "Баллы")
+      ? details("counted", "Засчитано", result.counted, "Баллы")
       : "<p>Пока нет выполненных требований.</p>"}
 
     ${details("skipped", "Не засчитано - игра уже засчитана в более высокой категории", result.skipped, "Баллы")}
