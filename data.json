@@ -641,7 +641,17 @@
       "game": "Warframe",
       "requirement": "19 ранг \"Tiger\" (Тигр).",
       "points": 6,
-      "check": null
+      "check": {
+        "apps": [
+          230410
+        ],
+        "achievements": {
+          "230410": [
+            "ACHIEVEMENT_80"
+          ]
+        },
+        "mode": "all"
+      }
     },
     {
       "game": "Noita",
@@ -1485,7 +1495,17 @@
       "game": "Warframe",
       "requirement": "30 ранг \"True Master\" (Истинный мастер).",
       "points": 40,
-      "check": null
+      "check": {
+        "apps": [
+          230410
+        ],
+        "achievements": {
+          "230410": [
+            "ACHIEVEMENT_89"
+          ]
+        },
+        "mode": "all"
+      }
     },
     {
       "game": "A Hat in Time",

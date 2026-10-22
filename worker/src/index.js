@@ -6,6 +6,9 @@
 //       names: { appid: название } }
 //   Кроме игр из таблицы в games попадают игры, наигранные достаточно
 //   для строки "любая игра" (check.anyGame); их названия - в names.
+// GET /games?user=<ник, SteamID или ссылка на профиль>
+//   → { steamid, games: [{ appid, name, minutes, icon }] } - все игры,
+//     сначала самые наигранные.
 // GET /achievements?steamid=<id>&appids=1,2,3
 //   → { achievements: { appid: { total, unlocked: [apiname] } | { error } } }
 // GET /search?term=<название>
@@ -132,6 +135,32 @@ async function resolveSteamId(env, user) {
   return body.response.steamid;
 }
 
+const HIDDEN_GAMES =
+  "Список игр скрыт. Откройте 'Сведения об играх' в настройках приватности Steam.";
+
+async function handleGames(env, params) {
+  const user = params.get("user");
+  if (!user) throw new HttpError(400, "Укажите ник или SteamID");
+
+  const steamid = await resolveSteamId(env, user);
+  const ownedGames = await getOwnedGames(env, steamid);
+  if (!ownedGames) throw new HttpError(403, HIDDEN_GAMES);
+
+  return {
+    steamid,
+    games: ownedGames
+      .sort((a, b) => b.playtime_forever - a.playtime_forever)
+      .map(game => ({
+        appid: game.appid,
+        name: game.name,
+        minutes: game.playtime_forever,
+        icon: game.img_icon_url
+          ? `https://media.steampowered.com/steamcommunity/public/images/apps/${game.appid}/${game.img_icon_url}.jpg`
+          : null
+      }))
+  };
+}
+
 async function handleProfile(env, params) {
   const user = params.get("user");
   if (!user) throw new HttpError(400, "Укажите ник или SteamID");
@@ -147,12 +176,7 @@ async function handleProfile(env, params) {
   const player = summary.body?.response?.players?.[0];
   if (!player) throw new HttpError(404, "Профиль Steam не найден");
 
-  if (!ownedGames) {
-    throw new HttpError(
-      403,
-      "Список игр скрыт. Откройте 'Сведения об играх' в настройках приватности Steam."
-    );
-  }
+  if (!ownedGames) throw new HttpError(403, HIDDEN_GAMES);
 
   const games = {};
   const names = {};
@@ -416,6 +440,10 @@ export default {
     try {
       if (route === "GET /profile") {
         return json(await handleProfile(env, url.searchParams), 200, cors);
+      }
+
+      if (route === "GET /games") {
+        return json(await handleGames(env, url.searchParams), 200, cors);
       }
 
       if (route === "GET /achievements") {
