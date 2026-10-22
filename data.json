@@ -667,6 +667,12 @@
       "points": 40
     },
     {
+      "nickname": "bruhworld04",
+      "game": "Slay the Spire 2",
+      "requirement": "пройти 10 возвышений на всех персонажах",
+      "points": 35
+    },
+    {
       "game": "Stellaris",
       "requirement": "125 достижений + обязательное достижение \"My name is Ozymandias\"",
       "points": 44
