@@ -161,15 +161,18 @@
       Нажмите на строку, чтобы отметить её выполненной. Отметка сохраняется в этом браузере.
     </p>
 
-    <div class="table-wrap">
-      <table>
-        <thead id="table-head"></thead>
-        <tbody id="table-body"></tbody>
-      </table>
-      <p id="empty-message" class="empty" hidden>
-        В этой категории пока нет записей.
-      </p>
-    </div>
+    <details class="table-details" open>
+      <summary class="table-toggle">Свернуть таблицу</summary>
+      <div class="table-wrap">
+        <table>
+          <thead id="table-head"></thead>
+          <tbody id="table-body"></tbody>
+        </table>
+        <p id="empty-message" class="empty" hidden>
+          В этой категории пока нет записей.
+        </p>
+      </div>
+    </details>
 
     <section id="faq" class="faq" aria-labelledby="faq-title">
       <h2 id="faq-title">Как пользоваться сайтом</h2>
