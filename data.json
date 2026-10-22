@@ -960,14 +960,6 @@
       "status": "на рассмотрении"
     },
     {
-      "issue": 17,
-      "nickname": "hostt1",
-      "game": "GTFO",
-      "requirement": "Потные лапки: достижение \"отклонение\"",
-      "points": 10,
-      "status": "на рассмотрении"
-    },
-    {
       "issue": 18,
       "nickname": "hostt1",
       "game": "GTFO",
@@ -981,6 +973,14 @@
       "game": "GTFO",
       "requirement": "Сломанные лапки: достижение \"Превосходная эффективность\"",
       "points": 250,
+      "status": "на рассмотрении"
+    },
+    {
+      "issue": 17,
+      "nickname": "hostt1",
+      "game": "GTFO",
+      "requirement": "Потные лапки: достижение \"отклонение\"",
+      "points": 10,
       "status": "на рассмотрении"
     }
   ]
