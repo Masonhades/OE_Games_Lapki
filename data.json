@@ -988,6 +988,14 @@
       "requirement": "Потные лапки: достижение \"отклонение\"",
       "points": 10,
       "status": "на рассмотрении"
+    },
+    {
+      "issue": 20,
+      "nickname": "hostt1",
+      "game": "DIVE or DIE - Children of Rain",
+      "requirement": "Достижение: \"Вестник дождя\"",
+      "points": 7,
+      "status": "на рассмотрении"
     }
   ]
 }
