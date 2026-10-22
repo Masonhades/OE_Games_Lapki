@@ -10,6 +10,7 @@
 <body>
   <main class="page">
     <h1>Таблица Лапок</h1>
+    <a class="faq-link" href="#faq">Как пользоваться сайтом?</a>
 
     <nav class="tabs" aria-label="Категории таблицы">
       <button class="tab active" data-category="Потные">Потные</button>
@@ -18,12 +19,123 @@
       <button class="tab" data-category="Предложения">Предложения</button>
     </nav>
 
-    <a
-      class="button suggest-button"
-      href="https://github.com/Varkenor/OE_Games_Lapki/issues/new?template=suggestion.yml"
-      target="_blank"
-      rel="noopener"
-    >Предложить свои</a>
+    <button id="suggest-open" class="button suggest-button" type="button">Предложить свои</button>
+
+    <dialog id="suggest-dialog" class="suggest-dialog" aria-labelledby="suggest-title">
+      <form id="suggest-form" class="suggest-form" novalidate>
+        <div class="suggest-header">
+          <h2 id="suggest-title">Предложить лапку</h2>
+          <button class="suggest-close" type="button" data-close aria-label="Закрыть">×</button>
+        </div>
+
+        <label class="field">
+          <span>Ник в Discord</span>
+          <input name="nickname" maxlength="40" autocomplete="off" required
+                 placeholder="Имя пользователя, а не ник на сервере">
+          <small>Будет показан в таблице. <a href="image.png" target="_blank" rel="noopener">Где найти?</a></small>
+        </label>
+
+        <div class="field">
+          <label for="suggest-game">Игра</label>
+          <div class="suggest-game">
+            <input id="suggest-game" name="game" maxlength="100" autocomplete="off" required
+                   placeholder="Начните вводить название">
+            <ul id="suggest-games" class="suggest-games" hidden></ul>
+          </div>
+          <small id="suggest-game-note">
+            Выберите игру из списка Steam, чтобы требование проверялось автоматически.
+            Игру не из Steam просто впишите.
+          </small>
+        </div>
+
+        <fieldset id="suggest-steam" class="suggest-steam" hidden>
+          <legend>Автопроверка по Steam</legend>
+          <div class="suggest-row">
+            <label class="field">
+              <span>% достижений</span>
+              <input name="percent" type="number" min="1" max="100" placeholder="-">
+            </label>
+            <label class="field">
+              <span>Часов в игре</span>
+              <input name="hours" type="number" min="1" placeholder="-">
+            </label>
+          </div>
+          <p id="suggest-ach-note" class="steam-note"></p>
+          <input id="suggest-ach-filter" type="search" placeholder="Поиск по достижениям…" hidden>
+          <div id="suggest-achievements" class="suggest-achievements" hidden></div>
+        </fieldset>
+
+        <label class="field">
+          <span>Требование</span>
+          <textarea name="requirement" maxlength="500" rows="3" required
+                    placeholder="Коротко, как в таблице: 90% достижений + достижение '…'"></textarea>
+        </label>
+
+        <label class="field">
+          <span>Описание (необязательно)</span>
+          <textarea name="description" maxlength="2000" rows="4"
+                    placeholder="Почему это сложно, что нужно учесть. В таблицу не попадает - только для рассмотрения."></textarea>
+        </label>
+
+        <div class="suggest-row">
+          <label class="field">
+            <span>Категория</span>
+            <select name="category">
+              <option>Потные</option>
+              <option>Мега</option>
+              <option>Сломанные</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Баллы</span>
+            <input name="points" type="number" min="1" max="10" required placeholder="1–10">
+          </label>
+        </div>
+
+        <p id="suggest-status" class="suggest-status" hidden></p>
+
+        <div class="suggest-actions">
+          <button class="button" type="submit">Отправить</button>
+          <a href="https://github.com/Masonhades/OE_Games_Lapki-main/issues/new?template=suggestion.yml"
+             target="_blank" rel="noopener">или через GitHub</a>
+        </div>
+      </form>
+    </dialog>
+
+    <section class="steam-check" aria-label="Проверка по Steam">
+      <h2>Сколько лапок у меня?</h2>
+      <form id="steam-form" class="steam-form">
+        <input
+          id="steam-user"
+          type="text"
+          placeholder="Ник, SteamID или ссылка на профиль Steam"
+          autocomplete="off"
+          required
+        >
+        <button class="button" type="submit">Проверить</button>
+      </form>
+      <p class="steam-note">
+        Профиль и "Сведения об играх" должны быть открыты в настройках приватности Steam.
+      </p>
+      <div id="steam-result" hidden></div>
+    </section>
+
+    <dialog id="manual-dialog" class="suggest-dialog" aria-labelledby="manual-title">
+      <div class="suggest-form">
+        <div class="suggest-header">
+          <h2 id="manual-title">Добавить вручную</h2>
+          <button class="suggest-close" type="button" data-close aria-label="Закрыть">×</button>
+        </div>
+        <p class="steam-note">
+          Отметьте то, что выполнено, но не проверяется через Steam. Снимите отметку,
+          чтобы убрать строку из подсчёта. Одна игра засчитывается один раз - в самой
+          высокой категории.
+        </p>
+        <input id="manual-search" type="search" placeholder="Поиск по играм…">
+        <div id="manual-list" class="manual-list"></div>
+        <p id="manual-total" class="steam-total"></p>
+      </div>
+    </dialog>
 
     <section class="controls" aria-label="Поиск и сортировка">
       <input id="search" type="search" placeholder="Поиск по играм…">
@@ -45,7 +157,7 @@
       </div>
     </section>
 
-    <p class="hint">
+    <p id="table-hint" class="hint">
       Нажмите на строку, чтобы отметить её выполненной. Отметка сохраняется в этом браузере.
     </p>
 
@@ -58,6 +170,80 @@
         В этой категории пока нет записей.
       </p>
     </div>
+
+    <section id="faq" class="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Как пользоваться сайтом</h2>
+
+      <details>
+        <summary>Как посчитать свои баллы?</summary>
+        <p>
+          Введите ник, SteamID или ссылку на профиль в блоке "Сколько лапок у меня?" и нажмите
+          "Проверить". Сайт сам сверит ваши достижения и часы в Steam с таблицей и посчитает баллы.
+        </p>
+        <p>
+          Профиль и "Сведения об играх" должны быть открыты в настройках приватности Steam,
+          иначе проверить ничего не получится.
+        </p>
+      </details>
+
+      <details>
+        <summary>Что делать с играми, которые не проверяются через Steam?</summary>
+        <p>
+          Ранги, рекорды, логбуки и другие задачи сайт проверить не может. Если вы их выполнили,
+          нажмите "Добавить вручную" после проверки и отметьте нужные строки - или просто нажмите
+          на строку в таблице. Так же можно убрать строку, которую сайт засчитал по Steam.
+        </p>
+        <p>
+          Одна игра засчитывается один раз - в самой высокой категории. Например, если вы отметили
+          Risk of Rain 2 в "Мега", строка этой игры из "Потных" в сумму уже не войдёт.
+        </p>
+        <p>
+          Отметки сохраняются только в вашем браузере. За всё, что добавлено вручную,
+          понадобятся скриншоты.
+        </p>
+      </details>
+
+      <details>
+        <summary>Как получить роль?</summary>
+        <p>
+          Отправьте скриншоты <strong>одним сообщением</strong> в канал "〉〉📞поддержка"
+          и упомяните роль "🖥️ Куратор игр 🖥️" - он выдаст вам роль.
+        </p>
+        <p class="faq-example">
+          Пример сообщения: "Привет, вот скрин, вот мои баллы, вот скриншоты с выбранных игр вручную".
+        </p>
+      </details>
+
+      <details>
+        <summary>Моей игры нет в таблице. Можно получить роль за неё?</summary>
+        <p>
+          Да. За любую игру из Steam, которой нет в таблице, засчитывается строка "Любая игра
+          из стима": 150+ часов и 75% достижений.
+        </p>
+        <p>
+          Ещё вы можете отправить записи крутых моментов: забеги, получение ачивок и другие
+          крутые штуки. Кураторы оценят их, и вы получите "Потные лапки" за любую игру.
+          За оффтоп - 1–3 балла.
+        </p>
+        <p>
+          А если хотите, чтобы игра появилась в таблице, - нажмите "Предложить свои".
+        </p>
+      </details>
+
+      <details>
+        <summary>Что будет за нечестно полученные лапки?</summary>
+        <p>
+          Если при проверке окажется, что лапки получены нечестно, их заберут и выдадут тайм-аут.
+          Например, нельзя получить "Сломанные" за одну и ту же игру из "Мега", дважды запросив
+          за неё "Мега лапки".
+        </p>
+        <ul>
+          <li>в первый раз - 1 месяц;</li>
+          <li>во второй - 3 месяца;</li>
+          <li>в третий - полный запрет.</li>
+        </ul>
+      </details>
+    </section>
   </main>
 
   <script src="app.js"></script>

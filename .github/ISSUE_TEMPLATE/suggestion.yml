@@ -7,7 +7,7 @@ body:
     id: nickname
     attributes:
       label: Ник
-      placeholder: Имя пользователя в дискорде (не на сервере), который будет отображаться в таблице
+      placeholder: Имя пользователя в дискорде (не на сервере), который будет отображаться в таблице.
     validations:
       required: true
 
@@ -22,7 +22,7 @@ body:
     id: game
     attributes:
       label: Игра
-      placeholder: Название игры
+      placeholder: "Название игры:"
     validations:
       required: true
 
@@ -30,22 +30,25 @@ body:
     id: requirement
     attributes:
       label: Требование
-      placeholder: Что нужно выполнить?
+      description: Коротко, как в таблице. Подробности - в поле "Описание" ниже.
+      placeholder: "Например: 90% достижений + достижение \"Ничего себе техника!\""
     validations:
       required: true
 
   - type: textarea
+    id: description
     attributes:
-      label: Пояснение
-      placeholder: В подробностях описать требования для получения
+      label: Описание
+      description: Почему испытание сложное, что нужно учесть. В таблицу не попадает, его читают только при рассмотрении.
+      placeholder: Например, достижение доступно только в NG+, часть ачивок требует локального коопа…
     validations:
-      required: False
-      
+      required: false
+
   - type: input
     id: points
     attributes:
       label: Кол-во баллов
-      placeholder: "Например: 10 (только 1 число, без диапозона)"
+      placeholder: "Например: 10"
     validations:
       required: true
 
@@ -55,7 +58,7 @@ body:
         **Максимум баллов в категории:**
         - Потные: до 10
         - Мега: до 50
-        - Сломанные: до 300
+        - Сломанные: до 500
 
 
   - type: dropdown

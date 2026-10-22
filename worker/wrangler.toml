@@ -1,0 +1,24 @@
+name = "lapki-steam"
+main = "src/index.js"
+compatibility_date = "2025-06-01"
+
+[vars]
+DATA_URL = "https://masonhades.github.io/OE_Games_Lapki/data.json"
+ALLOWED_ORIGINS = "https://masonhades.github.io,http://localhost:8000"
+# Репозиторий, в котором создаются Issue с предложениями.
+GITHUB_REPO = "Masonhades/OE_Games_Lapki"
+
+# Не больше 2 предложений в минуту с одного IP (period - только 10 или 60).
+[[ratelimits]]
+name = "SUGGEST_LIMITER"
+namespace_id = "1001"
+
+  [ratelimits.simple]
+  limit = 2
+  period = 60
+
+# Ключ Steam хранится в секретах, а не здесь:
+#   npx wrangler secret put STEAM_API_KEY
+# Токен для создания Issue (fine-grained, только этот репозиторий,
+# права Issues: Read and write):
+#   npx wrangler secret put GITHUB_TOKEN

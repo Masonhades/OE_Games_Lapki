@@ -8,34 +8,68 @@ permissions:
   contents: write
   issues: read
 
+# Запуски по одному Issue идут строго по очереди, иначе старый снимок
+# Issue (например, с меткой "принято") может записаться поверх нового.
+concurrency:
+  group: sync-issue-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
 jobs:
   sync:
-    if: ${{ !github.event.issue.pull_request }}
+    # Обычные Issue (вопросы, баги) не трогаем - только предложения.
+    if: ${{ !github.event.issue.pull_request && contains(github.event.issue.labels.*.name, 'предложение') }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Получить файлы репозитория
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
 
       - name: Настроить Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
-      - name: Обновить data.json
+      # Несколько запусков могут идти одновременно, поэтому при неудачном
+      # push берём свежую версию ветки и применяем Issue к ней заново.
+      - name: Обновить и сохранить data.json
         env:
           ISSUE_JSON: ${{ toJson(github.event.issue) }}
-        run: python scripts/sync_issue.py
-
-      - name: Сохранить изменения
+          EVENT_ACTION: ${{ github.event.action }}
+          BRANCH: ${{ github.event.repository.default_branch }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
         run: |
-          if git diff --quiet -- data.json; then
-            echo "Изменений в таблице нет"
-            exit 0
-          fi
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data.json
-          git commit -m "Обновить таблицу по Issue #${{ github.event.issue.number }}"
-          git push
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin "$BRANCH"
+            git reset --hard "origin/$BRANCH"
+
+            python scripts/sync_issue.py
+
+            # Размечаем новые строки для проверки по Steam, если ключ задан.
+            if [ -n "$STEAM_API_KEY" ]; then
+              python scripts/build_checks.py || echo "Не удалось разметить строки для Steam"
+            fi
+
+            if git diff --quiet -- data.json; then
+              echo "Изменений в таблице нет"
+              exit 0
+            fi
+
+            git add data.json
+            git commit -m "Обновить таблицу по Issue #$ISSUE_NUMBER"
+
+            if git push origin "HEAD:$BRANCH"; then
+              exit 0
+            fi
+
+            echo "Push не удался (попытка $attempt), повторяем"
+            sleep $((RANDOM % 10 + 5))
+          done
+
+          echo "Не удалось сохранить изменения после 5 попыток"
+          exit 1

@@ -65,6 +65,60 @@ input {
   transform: translateY(-1px);
 }
 
+.faq-link {
+  display: block;
+  width: fit-content;
+  margin: -16px auto 24px;
+  color: #c4b5fd;
+}
+
+.faq {
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid #494949;
+  border-radius: 12px;
+  background: #303030;
+  scroll-margin-top: 16px;
+}
+
+.faq h2 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+}
+
+.faq details {
+  border-bottom: 1px solid #494949;
+}
+
+.faq details:last-child {
+  border-bottom: 0;
+}
+
+.faq summary {
+  padding: 14px 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq summary:hover,
+.faq details[open] summary {
+  color: #c4b5fd;
+}
+
+.faq p,
+.faq ul {
+  margin: 0 0 12px;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.faq-example {
+  padding: 10px 14px;
+  border-left: 3px solid #7c3aed;
+  border-radius: 0 8px 8px 0;
+  background: #383838;
+}
+
 .suggest-button {
   display: block;
   width: fit-content;
@@ -164,5 +218,364 @@ tbody tr:last-child td {
   th,
   td {
     padding: 11px 12px;
+  }
+}
+
+.steam-check {
+  margin: 0 0 28px;
+  padding: 20px;
+  border: 1px solid #494949;
+  border-radius: 12px;
+  background: #303030;
+}
+
+.steam-check h2 {
+  margin: 0 0 14px;
+  font-size: 1.3rem;
+}
+
+.steam-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+}
+
+.steam-form button:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.steam-note {
+  color: #bbb;
+  font-size: .9rem;
+  margin: 12px 0 0;
+}
+
+#steam-result {
+  margin-top: 18px;
+}
+
+#steam-result .table-wrap {
+  margin: 12px 0;
+}
+
+#steam-result tbody tr,
+#table-body tr.readonly {
+  cursor: default;
+}
+
+#steam-result details {
+  margin: 12px 0;
+}
+
+#steam-result summary {
+  cursor: pointer;
+  color: #c4b5fd;
+}
+
+.steam-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.steam-profile img {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.steam-total {
+  font-size: 1.2rem;
+  margin: 14px 0;
+}
+
+.steam-total strong {
+  color: #a78bfa;
+  font-size: 1.6rem;
+}
+
+.steam-error {
+  color: #fca5a5;
+}
+
+@media (max-width: 600px) {
+  .steam-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.suggest-dialog {
+  width: min(640px, calc(100% - 32px));
+  max-height: calc(100% - 32px);
+  padding: 0;
+  border: 1px solid #494949;
+  border-radius: 12px;
+  background: #303030;
+  color: #f5f5f5;
+}
+
+.suggest-dialog::backdrop {
+  background: rgba(0, 0, 0, .6);
+}
+
+.suggest-form {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+}
+
+.suggest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.suggest-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.suggest-close {
+  border: 0;
+  background: none;
+  color: #bbb;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.suggest-close:hover {
+  color: #fff;
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: #4c1d95;
+  color: #ddd6fe;
+  font-size: .8rem;
+  white-space: nowrap;
+}
+
+#steam-result > .button {
+  margin-top: 4px;
+}
+
+.manual-list {
+  display: grid;
+  gap: 2px;
+  max-height: min(420px, 55vh);
+  overflow-y: auto;
+  padding: 4px;
+  border: 1px solid #494949;
+  border-radius: 10px;
+  background: #2a2a2a;
+}
+
+.manual-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.manual-item:hover {
+  background: #383838;
+}
+
+.manual-item input {
+  margin-top: 4px;
+}
+
+.manual-item small {
+  display: block;
+  margin-top: 2px;
+  color: #bbb;
+}
+
+#manual-total {
+  margin: 0;
+}
+
+#manual-total strong {
+  color: #a78bfa;
+  font-size: 1.4rem;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.field > span,
+.field > label {
+  font-weight: 600;
+}
+
+.field small {
+  color: #bbb;
+  font-size: .85rem;
+}
+
+.suggest-form a {
+  color: #c4b5fd;
+}
+
+textarea {
+  font: inherit;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid #555;
+  border-radius: 10px;
+  background: #333;
+  color: #fff;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: 2px solid #a78bfa;
+  border-color: transparent;
+}
+
+.suggest-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.suggest-game {
+  position: relative;
+  display: grid;
+}
+
+.suggest-games {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  border: 1px solid #555;
+  border-radius: 10px;
+  background: #383838;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .4);
+}
+
+.suggest-games button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+}
+
+.suggest-games button:hover,
+.suggest-games button:focus {
+  background: #7c3aed;
+  outline: none;
+}
+
+.suggest-games img {
+  width: 60px;
+  border-radius: 4px;
+}
+
+.suggest-steam {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 14px;
+  border: 1px solid #494949;
+  border-radius: 10px;
+}
+
+.suggest-steam legend {
+  padding: 0 6px;
+  color: #c4b5fd;
+}
+
+.suggest-steam .steam-note {
+  margin: 0;
+}
+
+.suggest-achievements {
+  display: grid;
+  gap: 2px;
+  max-height: 260px;
+  overflow-y: auto;
+  padding: 4px;
+  border: 1px solid #494949;
+  border-radius: 10px;
+  background: #2a2a2a;
+}
+
+.suggest-achievement {
+  display: grid;
+  grid-template-columns: auto 32px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.suggest-achievement:hover {
+  background: #383838;
+}
+
+.suggest-achievement img {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.suggest-achievement small {
+  display: block;
+  color: #bbb;
+}
+
+.suggest-status {
+  margin: 0;
+}
+
+.suggest-status.error {
+  color: #fca5a5;
+}
+
+.suggest-status.success {
+  color: #86efac;
+}
+
+.suggest-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.suggest-actions button:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+@media (max-width: 600px) {
+  .suggest-row {
+    grid-template-columns: 1fr;
   }
 }
